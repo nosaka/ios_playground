@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
+		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
+		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
 		CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4EF1EF7556100195E71 /* AppDelegate.swift */; };
-		CADFE4F21EF7556100195E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4F11EF7556100195E71 /* ViewController.swift */; };
-		CADFE4F51EF7556100195E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F31EF7556100195E71 /* Main.storyboard */; };
 		CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F61EF7556100195E71 /* Assets.xcassets */; };
 		CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */; };
+		CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE5041EF7579300195E71 /* MainViewController.swift */; };
+		CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5051EF7579300195E71 /* MainViewController.xib */; };
+		CADFE50F1EF76AF200195E71 /* PeripheralExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */; };
+		CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5111EF76D7900195E71 /* Localizable.strings */; };
+		CADFE5131EF776CB00195E71 /* PeripheralExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */; };
+		CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402F24431E2E2ED06C8B555E /* Pods-ios_playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.release.xcconfig"; sourceTree = "<group>"; };
+		56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.debug.xcconfig"; sourceTree = "<group>"; };
+		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		CADFE4EC1EF7556100195E71 /* ios_playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFE4EF1EF7556100195E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CADFE4F11EF7556100195E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CADFE4F41EF7556100195E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CADFE4F61EF7556100195E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CADFE4F91EF7556100195E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CADFE4FB1EF7556100195E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CADFE5041EF7579300195E71 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CADFE5051EF7579300195E71 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralExampleViewController.swift; sourceTree = "<group>"; };
+		CADFE5111EF76D7900195E71 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CADFE5181EF7773800195E71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PeripheralExampleViewController.xib; sourceTree = "<group>"; };
+		CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPeripheralManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58A0C5551017859E1C2FFAEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */,
+				402F24431E2E2ED06C8B555E /* Pods-ios_playground.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA3F9D231EF78EB300172EC5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */,
+				CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CA3F9D261EF79AC000172EC5 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		CADFE4E31EF7556100195E71 = {
 			isa = PBXGroup;
 			children = (
 				CADFE4EE1EF7556100195E71 /* ios_playground */,
 				CADFE4ED1EF7556100195E71 /* Products */,
+				58A0C5551017859E1C2FFAEC /* Pods */,
+				DA10708A6854F79B4EFFB2DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,44 @@
 		CADFE4EE1EF7556100195E71 /* ios_playground */ = {
 			isa = PBXGroup;
 			children = (
+				CA3F9D231EF78EB300172EC5 /* Util */,
+				CADFE5191EF787C400195E71 /* Beacon */,
+				CADFE5031EF7570900195E71 /* ViewController */,
+				CA3F9D261EF79AC000172EC5 /* Alert */,
 				CADFE4EF1EF7556100195E71 /* AppDelegate.swift */,
-				CADFE4F11EF7556100195E71 /* ViewController.swift */,
-				CADFE4F31EF7556100195E71 /* Main.storyboard */,
 				CADFE4F61EF7556100195E71 /* Assets.xcassets */,
 				CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */,
 				CADFE4FB1EF7556100195E71 /* Info.plist */,
+				CADFE5111EF76D7900195E71 /* Localizable.strings */,
 			);
 			path = ios_playground;
+			sourceTree = "<group>";
+		};
+		CADFE5031EF7570900195E71 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CADFE5041EF7579300195E71 /* MainViewController.swift */,
+				CADFE5051EF7579300195E71 /* MainViewController.xib */,
+				CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */,
+				CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CADFE5191EF787C400195E71 /* Beacon */ = {
+			isa = PBXGroup;
+			children = (
+				CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */,
+			);
+			path = Beacon;
+			sourceTree = "<group>";
+		};
+		DA10708A6854F79B4EFFB2DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CADFE4FE1EF7556100195E71 /* Build configuration list for PBXNativeTarget "ios_playground" */;
 			buildPhases = (
+				F2FAAD59931525F3C12E9621 /* [CP] Check Pods Manifest.lock */,
 				CADFE4E81EF7556100195E71 /* Sources */,
 				CADFE4E91EF7556100195E71 /* Frameworks */,
 				CADFE4EA1EF7556100195E71 /* Resources */,
+				3FDFB5081D1D04A40B979CFC /* [CP] Embed Pods Frameworks */,
+				827F19A46F2D745D2C30BC00 /* [CP] Copy Pods Resources */,
+				CA41B1551EFB5031009F3E2B /* R.Swift Script */,
 			);
 			buildRules = (
 			);
@@ -125,40 +203,108 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */,
+				CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */,
 				CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */,
-				CADFE4F51EF7556100195E71 /* Main.storyboard in Resources */,
+				CADFE5131EF776CB00195E71 /* PeripheralExampleViewController.xib in Resources */,
+				CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FDFB5081D1D04A40B979CFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827F19A46F2D745D2C30BC00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA41B1551EFB5031009F3E2B /* R.Swift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R.Swift Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
+		F2FAAD59931525F3C12E9621 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CADFE4E81EF7556100195E71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CADFE4F21EF7556100195E71 /* ViewController.swift in Sources */,
+				CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */,
+				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
+				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,
+				CADFE50F1EF76AF200195E71 /* PeripheralExampleViewController.swift in Sources */,
+				CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CADFE4F31EF7556100195E71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CADFE4F41EF7556100195E71 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CADFE4F91EF7556100195E71 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CADFE5181EF7773800195E71 /* en */,
+			);
+			name = PeripheralExampleViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -259,6 +405,7 @@
 		};
 		CADFE4FF1EF7556100195E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LAHC97E67W;
@@ -272,6 +419,7 @@
 		};
 		CADFE5001EF7556100195E71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 402F24431E2E2ED06C8B555E /* Pods-ios_playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LAHC97E67W;
@@ -302,6 +450,7 @@
 				CADFE5001EF7556100195E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

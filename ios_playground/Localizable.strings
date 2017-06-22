@@ -1,0 +1,12 @@
+/*
+ labels.strings
+ ios_playground
+ 
+ Created by Shintaro Nosaka on 2017/06/19.
+ Copyright © 2017年 Shintaro Nosaka. All rights reserved.
+ */
+
+"alert_action_ok" = "OK";
+"alert_action_cancel" = "キャンセル";
+"alert_ttl_requestBlePoweredOn" = "Bluetoothをオンにしてください";
+"alert_msg_requestBlePoweredOn" = "Bluetoothをオンにしてください";
