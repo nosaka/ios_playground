@@ -10,6 +10,7 @@
 		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
+		CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41B15A1EFB5210009F3E2B /* R.generated.swift */; };
 		CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4EF1EF7556100195E71 /* AppDelegate.swift */; };
 		CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F61EF7556100195E71 /* Assets.xcassets */; };
 		CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,7 @@
 		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		CA41B15A1EFB5210009F3E2B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CADFE4EC1EF7556100195E71 /* ios_playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFE4EF1EF7556100195E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CADFE4F61EF7556100195E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		CADFE4E31EF7556100195E71 = {
 			isa = PBXGroup;
 			children = (
+				CA41B15A1EFB5210009F3E2B /* R.generated.swift */,
 				CADFE4EE1EF7556100195E71 /* ios_playground */,
 				CADFE4ED1EF7556100195E71 /* Products */,
 				58A0C5551017859E1C2FFAEC /* Pods */,
@@ -146,12 +149,12 @@
 			buildConfigurationList = CADFE4FE1EF7556100195E71 /* Build configuration list for PBXNativeTarget "ios_playground" */;
 			buildPhases = (
 				F2FAAD59931525F3C12E9621 /* [CP] Check Pods Manifest.lock */,
+				CA41B1551EFB5031009F3E2B /* R.Swift Script */,
 				CADFE4E81EF7556100195E71 /* Sources */,
 				CADFE4E91EF7556100195E71 /* Frameworks */,
 				CADFE4EA1EF7556100195E71 /* Resources */,
 				3FDFB5081D1D04A40B979CFC /* [CP] Embed Pods Frameworks */,
 				827F19A46F2D745D2C30BC00 /* [CP] Copy Pods Resources */,
-				CA41B1551EFB5031009F3E2B /* R.Swift Script */,
 			);
 			buildRules = (
 			);
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */,
+				CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */,
 				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,

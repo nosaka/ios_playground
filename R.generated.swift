@@ -81,8 +81,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
+      /// Value: Beacon受信
+      static let main_list_item_bluetoothCentral = Rswift.StringResource(key: "main_list_item_bluetoothCentral", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Beacon発信
+      static let main_list_item_bluetoothPeripheral = Rswift.StringResource(key: "main_list_item_bluetoothPeripheral", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Bluetoothをオンにしてください
       static let alert_msg_requestBlePoweredOn = Rswift.StringResource(key: "alert_msg_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Bluetoothをオンにしてください
@@ -91,6 +95,16 @@ struct R: Rswift.Validatable {
       static let alert_action_ok = Rswift.StringResource(key: "alert_action_ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: キャンセル
       static let alert_action_cancel = Rswift.StringResource(key: "alert_action_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Beacon受信
+      static func main_list_item_bluetoothCentral(_: Void = ()) -> String {
+        return NSLocalizedString("main_list_item_bluetoothCentral", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Beacon発信
+      static func main_list_item_bluetoothPeripheral(_: Void = ()) -> String {
+        return NSLocalizedString("main_list_item_bluetoothPeripheral", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Bluetoothをオンにしてください
       static func alert_msg_requestBlePoweredOn(_: Void = ()) -> String {

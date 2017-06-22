@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Rswift
 
 enum AlertFactory {
     
@@ -15,18 +16,14 @@ enum AlertFactory {
     
     var alert: UIAlertController {
         switch self {
+            
         case .requestBlePoweredOn(let okHandler):
-            let alert = UIAlertController(title: localized(resource: "alert_ttl_requestBlePoweredOn"),
-                                          message: localized(resource: "alert_msg_requestBlePoweredOn"),
+            let alert = UIAlertController(title: R.string.localizable.alert_action_ok(),
+                                          message: R.string.localizable.alert_msg_requestBlePoweredOn(),
                                           preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: localized(resource: "alert_action_ok"), style: .default, handler: okHandler))
+            alert.addAction(UIAlertAction(title: R.string.localizable.alert_action_ok(), style: .default, handler: okHandler))
             return alert
         }
-    }
-    
-    
-    func localized(resource: String) -> String {
-        return NSLocalizedString("alert_ttl_requestBlePoweredOn", comment: "")
     }
   
 }

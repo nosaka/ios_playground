@@ -6,7 +6,12 @@
  Copyright © 2017年 Shintaro Nosaka. All rights reserved.
  */
 
+// MARK: Alert
 "alert_action_ok" = "OK";
 "alert_action_cancel" = "キャンセル";
 "alert_ttl_requestBlePoweredOn" = "Bluetoothをオンにしてください";
 "alert_msg_requestBlePoweredOn" = "Bluetoothをオンにしてください";
+
+// MARK: Label - Main
+"main_list_item_bluetoothPeripheral" = "Beacon発信";
+"main_list_item_bluetoothCentral" = "Beacon受信";

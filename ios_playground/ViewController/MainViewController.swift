@@ -28,11 +28,10 @@ class MainViewController: UIViewController {
             get {
                 switch self {
                 case .bluetoothPeripheral:
-                    return "Beacon発信"
+                    return R.string.localizable.main_list_item_bluetoothPeripheral()
                 case .bluetoothCentral:
-                    return "Beacon受信"
+                    return R.string.localizable.main_list_item_bluetoothCentral()
                 }
-                
             }
         }
 
