@@ -15,7 +15,7 @@ class PeripheralExampleViewController: UIViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var advertisingSwitch: UISwitch!
+    // Notting
     
     // MARK: UIViewController
 
@@ -24,41 +24,33 @@ class PeripheralExampleViewController: UIViewController {
         
         self.title = R.string.localizable.peripheralExaple_title()
         
-        self.advertisingSwitch.isOn = UserDefaultsUtil.advertising
-        if self.advertisingSwitch.isOn {
-            AppPeripheralManager.default.startAdvertising()
-        } else {
-            AppPeripheralManager.default.stopAdvertising()
-        }
-        
-        self.advertisingSwitch.addTarget(self, action: #selector(self.changedAdvertisingSwitch(_:)), for: .valueChanged)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        AppPeripheralManager.default.startAdvertising()
         AppPeripheralManager.default.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         AppPeripheralManager.default.delegate = nil
+        AppPeripheralManager.default.stopAdvertising()
         super.viewDidDisappear(animated)
     }
-    
-    // MARK: selector
-    
-    func changedAdvertisingSwitch(_ sender: UISwitch) {
-        if sender.isOn {
-            AppPeripheralManager.default.startAdvertising()
-        } else {
-            AppPeripheralManager.default.stopAdvertising()
-        }
-    }
+
 }
 
 extension PeripheralExampleViewController: AppPeripheralManagerDelegate {
     
-    func requestBlePoweredOn() {
-        self.present(AlertFactory.requestBlePoweredOn(okHandler: nil).alert, animated: true, completion: nil)
-        AppPeripheralManager.default.stopAdvertising()
+    func didUpdateBleState(peripheral: CBPeripheralManager) {
+        switch peripheral.state {
+        case .poweredOn:
+            AppPeripheralManager.default.startAdvertising()
+        case .poweredOff:
+            self.present(AlertFactory.requestBlePoweredOn(okHandler: nil).alert, animated: true, completion: nil)
+            AppPeripheralManager.default.stopAdvertising()
+        default:
+            AppPeripheralManager.default.stopAdvertising()
+        }
     }
 }

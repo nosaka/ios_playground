@@ -18,7 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        if let value = launchOptions?[UIApplicationLaunchOptionsKey.location] as? Bool, value {
+            
+//            // バックグラウンドでもタグを探索するためにBackgroundTaskを立ち上げる
+//            
+//            self.backgroundTaskId = application.beginBackgroundTaskWithExpirationHandler() {
+//                
+//                application.endBackgroundTask(self.backgroundTaskId)
+//                
+//                self.backgroundTaskId = UIBackgroundTaskInvalid
+//                
+//            }
+//            
+//            // 位置情報関係で起動された場合は位置情報更新の開始、及びリージョン監視を開始後、画面起動せず終了
+//            
+//            MNBLEBeaconManager.sharedInstance.launchLocation()
+            AppCentralManager.default.initLaunch()
+            
+            return true
+        }
         
+        // 通知権限要求
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
         
         
         self.window = UIWindow(frame: UIScreen.main.bounds)

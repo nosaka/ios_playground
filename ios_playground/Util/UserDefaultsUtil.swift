@@ -9,7 +9,6 @@
 import Foundation
 /// UserDefaults Keys
 class UserDefaultsKey {
-    static let startAdvertising = "keyStartAdvertising"
     static let startMonitoring = "keyStartMonitoring"
 }
 /// UserDefaults Utility
@@ -24,19 +23,7 @@ class UserDefaultsUtil {
     /// 初期処理
     /// 各種設定のデフォルト値を登録する
     func initialize() {
-        UserDefaults.standard.register(defaults: [UserDefaultsKey.startAdvertising : false,
-                                                  UserDefaultsKey.startMonitoring : false])
-    }
-    
-    /// アドバタイズフラグ
-    class var advertising:Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: UserDefaultsKey.startAdvertising)
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.startAdvertising)
-            UserDefaults.standard.synchronize()
-        }
+        UserDefaults.standard.register(defaults: [UserDefaultsKey.startMonitoring : false])
     }
     
     /// モニタリングフラグ

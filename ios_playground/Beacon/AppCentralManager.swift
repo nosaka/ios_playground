@@ -22,6 +22,12 @@ class AppCentralManager: NSObject {
     override init() {
         super.init()
         self.locationManager.delegate = self
+        self.locationManager.allowsBackgroundLocationUpdates = true
+    }
+    
+    /// ランチ時初期処理
+    func initLaunch() {
+        NotificationFactory.logging(.monitoredRegionWhenLaunch(self.locationManager)).notify()
     }
     
     /// モニタリング開始
@@ -158,6 +164,7 @@ extension AppCentralManager: CLLocationManagerDelegate {
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         log.debug("didEnterRegion")
+        NotificationFactory.enterRegion.notify()
     }
     
     
@@ -171,6 +178,7 @@ extension AppCentralManager: CLLocationManagerDelegate {
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         log.debug("didExitRegion")
+        NotificationFactory.exitRegion.notify()
     }
     
     

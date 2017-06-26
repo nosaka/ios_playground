@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
 		CA15CCC11EFD1753009C1837 /* +String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC01EFD1753009C1837 /* +String.swift */; };
+		CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC21F009341009C1837 /* NotificationFactory.swift */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
 		CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41B15A1EFB5210009F3E2B /* R.generated.swift */; };
@@ -32,6 +33,7 @@
 		56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.debug.xcconfig"; sourceTree = "<group>"; };
 		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA15CCC01EFD1753009C1837 /* +String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+String.swift"; sourceTree = "<group>"; };
+		CA15CCC21F009341009C1837 /* NotificationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		CA41B15A1EFB5210009F3E2B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */,
 				CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */,
+				CA15CCC21F009341009C1837 /* NotificationFactory.swift */,
 				CA15CCC01EFD1753009C1837 /* +String.swift */,
 			);
 			path = Util;
@@ -164,7 +167,6 @@
 			buildConfigurationList = CADFE4FE1EF7556100195E71 /* Build configuration list for PBXNativeTarget "ios_playground" */;
 			buildPhases = (
 				F2FAAD59931525F3C12E9621 /* [CP] Check Pods Manifest.lock */,
-				CA41B1551EFB5031009F3E2B /* R.Swift Script */,
 				CADFE4E81EF7556100195E71 /* Sources */,
 				CADFE4E91EF7556100195E71 /* Frameworks */,
 				CADFE4EA1EF7556100195E71 /* Resources */,
@@ -267,20 +269,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA41B1551EFB5031009F3E2B /* R.Swift Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "R.Swift Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
-		};
 		F2FAAD59931525F3C12E9621 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +302,7 @@
 				CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */,
 				CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */,
 				CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */,
+				CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,29 +28,23 @@ class AppPeripheralManager: NSObject {
     /// アドバタイズ開始
     func startAdvertising() {
         CBPeripheralManager.authorizationStatus()
-        UserDefaultsUtil.advertising = true
         self.peripheralManager.startAdvertising(AppBeacon.advertisingData)
         
     }
     
     /// アドバタイズ停止
     func stopAdvertising() {
-        UserDefaultsUtil.advertising = false
         self.peripheralManager.stopAdvertising()
     }
 }
 /// AppPeripheralManagerDelegate
 protocol AppPeripheralManagerDelegate: class {
-    func requestBlePoweredOn()
+    func didUpdateBleState(peripheral: CBPeripheralManager)
 }
 /// AppPeripheralManager+CBPeripheralManagerDelegate
 extension AppPeripheralManager: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        guard UserDefaultsUtil.advertising else {
-            return
-        }
-        self.peripheralManager.startAdvertising(AppBeacon.advertisingData)
         switch peripheral.state {
         case .poweredOn:
             self.peripheralManager.startAdvertising(AppBeacon.advertisingData)
@@ -59,6 +53,7 @@ extension AppPeripheralManager: CBPeripheralManagerDelegate {
         default:
             break
         }
+        self.delegate?.didUpdateBleState(peripheral: peripheral)
     }
 }
 

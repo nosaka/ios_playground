@@ -5,6 +5,11 @@ PODS:
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
   - XCGLogger (5.0.1):
     - XCGLogger/Core (= 5.0.1)
   - XCGLogger/Core (5.0.1):
@@ -12,14 +17,17 @@ PODS:
 
 DEPENDENCIES:
   - R.swift
+  - RealmSwift
   - XCGLogger (~> 5.0.1)
 
 SPEC CHECKSUMS:
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   XCGLogger: 0b43697155d41e4a1b15fc776f319c2141646b09
 
-PODFILE CHECKSUM: 10f045bc544c47edf2b78838bb5571ce7f6d2eef
+PODFILE CHECKSUM: f0434da3f669aff75377dd75c2d2216b20299d60
 
 COCOAPODS: 1.2.1
