@@ -58,7 +58,13 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(PeripheralExampleViewController(), animated: true)
+        let item = self.tableData[indexPath.row]
+        switch item {
+        case .bluetoothCentral:
+            self.navigationController?.pushViewController(CentralExampleViewController(), animated: true)
+        case .bluetoothPeripheral:
+            self.navigationController?.pushViewController(PeripheralExampleViewController(), animated: true)
+        }
     }
 }
 /// MainViewController+UITableViewDataSource
@@ -68,6 +74,7 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for:indexPath)
         
         cell.textLabel?.text = self.tableData[indexPath.row].text
+        cell.detailTextLabel?.text = "safjahkajkahfajhfkajhkjfhkahfjkahfkhskjas"
         return cell
     }
     

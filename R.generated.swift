@@ -36,12 +36,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
+    /// Nib `CentralExampleViewController`.
+    static let centralExampleViewController = _R.nib._CentralExampleViewController()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
     /// Nib `PeripheralExampleViewController`.
     static let peripheralExampleViewController = _R.nib._PeripheralExampleViewController()
+    
+    /// `UINib(name: "CentralExampleViewController", in: bundle)`
+    static func centralExampleViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.centralExampleViewController)
+    }
     
     /// `UINib(name: "MainViewController", in: bundle)`
     static func mainViewController(_: Void = ()) -> UIKit.UINib {
@@ -81,20 +88,35 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
+      /// Value: Beacon受信
+      static let centralExaple_title = Rswift.StringResource(key: "centralExaple_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Beacon受信
       static let main_list_item_bluetoothCentral = Rswift.StringResource(key: "main_list_item_bluetoothCentral", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Beacon発信
       static let main_list_item_bluetoothPeripheral = Rswift.StringResource(key: "main_list_item_bluetoothPeripheral", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Bluetoothをオンにしてください
-      static let alert_msg_requestBlePoweredOn = Rswift.StringResource(key: "alert_msg_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
-      /// Value: Bluetoothをオンにしてください
-      static let alert_ttl_requestBlePoweredOn = Rswift.StringResource(key: "alert_ttl_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Beacon発信
+      static let peripheralExaple_title = Rswift.StringResource(key: "peripheralExaple_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: OK
       static let alert_action_ok = Rswift.StringResource(key: "alert_action_ok", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: この機能を利用するには、Bluetoothをオンに設定する必要があります。
+      static let alert_msg_requestBlePoweredOn = Rswift.StringResource(key: "alert_msg_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: この機能を利用するには、位置情報を「常に許可する」に設定する必要があります。 設定を確認しますか？
+      static let alert_msg_requestLocationAlways = Rswift.StringResource(key: "alert_msg_requestLocationAlways", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: キャンセル
       static let alert_action_cancel = Rswift.StringResource(key: "alert_action_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: 確認
+      static let alert_ttl_requestBlePoweredOn = Rswift.StringResource(key: "alert_ttl_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: 確認
+      static let alert_ttl_requestLocationAlways = Rswift.StringResource(key: "alert_ttl_requestLocationAlways", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: 設定を開く
+      static let alert_action_open_setting = Rswift.StringResource(key: "alert_action_open_setting", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Beacon受信
+      static func centralExaple_title(_: Void = ()) -> String {
+        return NSLocalizedString("centralExaple_title", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Beacon受信
       static func main_list_item_bluetoothCentral(_: Void = ()) -> String {
@@ -106,14 +128,9 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("main_list_item_bluetoothPeripheral", bundle: R.hostingBundle, comment: "")
       }
       
-      /// Value: Bluetoothをオンにしてください
-      static func alert_msg_requestBlePoweredOn(_: Void = ()) -> String {
-        return NSLocalizedString("alert_msg_requestBlePoweredOn", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// Value: Bluetoothをオンにしてください
-      static func alert_ttl_requestBlePoweredOn(_: Void = ()) -> String {
-        return NSLocalizedString("alert_ttl_requestBlePoweredOn", bundle: R.hostingBundle, comment: "")
+      /// Value: Beacon発信
+      static func peripheralExaple_title(_: Void = ()) -> String {
+        return NSLocalizedString("peripheralExaple_title", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: OK
@@ -121,9 +138,34 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("alert_action_ok", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: この機能を利用するには、Bluetoothをオンに設定する必要があります。
+      static func alert_msg_requestBlePoweredOn(_: Void = ()) -> String {
+        return NSLocalizedString("alert_msg_requestBlePoweredOn", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: この機能を利用するには、位置情報を「常に許可する」に設定する必要があります。 設定を確認しますか？
+      static func alert_msg_requestLocationAlways(_: Void = ()) -> String {
+        return NSLocalizedString("alert_msg_requestLocationAlways", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: キャンセル
       static func alert_action_cancel(_: Void = ()) -> String {
         return NSLocalizedString("alert_action_cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: 確認
+      static func alert_ttl_requestBlePoweredOn(_: Void = ()) -> String {
+        return NSLocalizedString("alert_ttl_requestBlePoweredOn", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: 確認
+      static func alert_ttl_requestLocationAlways(_: Void = ()) -> String {
+        return NSLocalizedString("alert_ttl_requestLocationAlways", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: 設定を開く
+      static func alert_action_open_setting(_: Void = ()) -> String {
+        return NSLocalizedString("alert_action_open_setting", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -147,6 +189,17 @@ struct R: Rswift.Validatable {
 
 struct _R {
   struct nib {
+    struct _CentralExampleViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CentralExampleViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _MainViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MainViewController"

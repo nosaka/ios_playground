@@ -6,12 +6,23 @@
  Copyright © 2017年 Shintaro Nosaka. All rights reserved.
  */
 
-// MARK: Alert
+// MARK: Alert Action
 "alert_action_ok" = "OK";
 "alert_action_cancel" = "キャンセル";
-"alert_ttl_requestBlePoweredOn" = "Bluetoothをオンにしてください";
-"alert_msg_requestBlePoweredOn" = "Bluetoothをオンにしてください";
+"alert_action_open_setting" = "設定を開く";
+
+// MARK: Alert
+"alert_ttl_requestBlePoweredOn" = "確認";
+"alert_msg_requestBlePoweredOn" = "この機能を利用するには、Bluetoothをオンに設定する必要があります。";
+"alert_ttl_requestLocationAlways" = "確認";
+"alert_msg_requestLocationAlways" = "この機能を利用するには、位置情報を「常に許可する」に設定する必要があります。\n設定を確認しますか？";
 
 // MARK: Label - Main
 "main_list_item_bluetoothPeripheral" = "Beacon発信";
 "main_list_item_bluetoothCentral" = "Beacon受信";
+
+// MARK: Label - PeripheralExaple
+"peripheralExaple_title" = "Beacon発信";
+
+// MARK: Label - CentralExaple
+"centralExaple_title" = "Beacon受信";

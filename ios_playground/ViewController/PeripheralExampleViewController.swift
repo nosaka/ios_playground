@@ -9,28 +9,28 @@
 import UIKit
 import CoreBluetooth
 import CoreLocation
+import Rswift
 
 class PeripheralExampleViewController: UIViewController {
     
     // MARK: IBOutlet
-    @IBOutlet weak var advertisingSwitch: UISegmentedControl!
     
-    // MARK: statics
-    
-    private enum AdvertisingSwitchIndex:Int {
-        case on     = 0
-        case off    = 1
-    }
+    @IBOutlet weak var advertisingSwitch: UISwitch!
     
     // MARK: UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UserDefaultsUtil.startAdvertising {
-            self.advertisingSwitch.selectedSegmentIndex = AdvertisingSwitchIndex.on.rawValue
+        
+        self.title = R.string.localizable.peripheralExaple_title()
+        
+        self.advertisingSwitch.isOn = UserDefaultsUtil.advertising
+        if self.advertisingSwitch.isOn {
+            AppPeripheralManager.default.startAdvertising()
         } else {
-            self.advertisingSwitch.selectedSegmentIndex = AdvertisingSwitchIndex.off.rawValue
+            AppPeripheralManager.default.stopAdvertising()
         }
+        
         self.advertisingSwitch.addTarget(self, action: #selector(self.changedAdvertisingSwitch(_:)), for: .valueChanged)
     }
     
@@ -40,14 +40,14 @@ class PeripheralExampleViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
         AppPeripheralManager.default.delegate = nil
+        super.viewDidDisappear(animated)
     }
     
     // MARK: selector
     
-    func changedAdvertisingSwitch(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == AdvertisingSwitchIndex.on.rawValue {
+    func changedAdvertisingSwitch(_ sender: UISwitch) {
+        if sender.isOn {
             AppPeripheralManager.default.startAdvertising()
         } else {
             AppPeripheralManager.default.stopAdvertising()

@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
+		CA15CCC11EFD1753009C1837 /* +String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC01EFD1753009C1837 /* +String.swift */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
 		CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41B15A1EFB5210009F3E2B /* R.generated.swift */; };
+		CA46287D1EFB781500E84317 /* CentralExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */; };
+		CA46287E1EFB781500E84317 /* CentralExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */; };
+		CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287F1EFB849F00E84317 /* AppCentralManager.swift */; };
+		CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4628811EFB853900E84317 /* AppBeacon.swift */; };
 		CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4EF1EF7556100195E71 /* AppDelegate.swift */; };
 		CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F61EF7556100195E71 /* Assets.xcassets */; };
 		CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */; };
@@ -26,9 +31,14 @@
 		402F24431E2E2ED06C8B555E /* Pods-ios_playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.release.xcconfig"; sourceTree = "<group>"; };
 		56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.debug.xcconfig"; sourceTree = "<group>"; };
 		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA15CCC01EFD1753009C1837 /* +String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+String.swift"; sourceTree = "<group>"; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		CA41B15A1EFB5210009F3E2B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralExampleViewController.swift; sourceTree = "<group>"; };
+		CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralExampleViewController.xib; sourceTree = "<group>"; };
+		CA46287F1EFB849F00E84317 /* AppCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCentralManager.swift; sourceTree = "<group>"; };
+		CA4628811EFB853900E84317 /* AppBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBeacon.swift; sourceTree = "<group>"; };
 		CADFE4EC1EF7556100195E71 /* ios_playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFE4EF1EF7556100195E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CADFE4F61EF7556100195E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +78,7 @@
 			children = (
 				CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */,
 				CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */,
+				CA15CCC01EFD1753009C1837 /* +String.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -121,6 +132,8 @@
 				CADFE5051EF7579300195E71 /* MainViewController.xib */,
 				CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */,
 				CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */,
+				CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */,
+				CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -129,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */,
+				CA46287F1EFB849F00E84317 /* AppCentralManager.swift */,
+				CA4628811EFB853900E84317 /* AppBeacon.swift */,
 			);
 			path = Beacon;
 			sourceTree = "<group>";
@@ -179,6 +194,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = LAHC97E67W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -209,6 +229,7 @@
 				CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */,
 				CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */,
 				CADFE5131EF776CB00195E71 /* PeripheralExampleViewController.xib in Resources */,
+				CA46287E1EFB781500E84317 /* CentralExampleViewController.xib in Resources */,
 				CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +308,12 @@
 				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,
+				CA15CCC11EFD1753009C1837 /* +String.swift in Sources */,
+				CA46287D1EFB781500E84317 /* CentralExampleViewController.swift in Sources */,
 				CADFE50F1EF76AF200195E71 /* PeripheralExampleViewController.swift in Sources */,
+				CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */,
 				CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */,
+				CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -398,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

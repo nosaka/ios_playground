@@ -13,23 +13,6 @@ import CoreLocation
 
 class AppPeripheralManager: NSObject {
     
-    class AppBeacon {
-        
-        static let proximityUUID: UUID          = UUID(uuidString: "36E54BC0-AA81-4D4B-A3C9-B0FF983D24E2")!
-        static let identifier: String           = "ns.me.region"
-        static let localName: String            = "NSサンプルBeacon"
-        static let major: CLBeaconMajorValue    = 0
-        static let minor: CLBeaconMinorValue    = 0
-        static var beaconRegion: CLBeaconRegion {
-            return CLBeaconRegion(proximityUUID: self.proximityUUID, major: self.major, minor: self.minor, identifier: self.identifier)
-        }
-        static var advertisingData:[String : Any]? {
-            let peripheralData = self.beaconRegion.peripheralData(withMeasuredPower: nil)
-            peripheralData.setValue(self.localName, forKey: CBAdvertisementDataLocalNameKey)
-            return NSDictionary(dictionary: peripheralData) as? [String : Any]
-        }
-    }
-    
     static let `default` = AppPeripheralManager()
     
     var delegate: AppPeripheralManagerDelegate?
@@ -44,14 +27,15 @@ class AppPeripheralManager: NSObject {
     
     /// アドバタイズ開始
     func startAdvertising() {
-        UserDefaultsUtil.startAdvertising = true
+        CBPeripheralManager.authorizationStatus()
+        UserDefaultsUtil.advertising = true
         self.peripheralManager.startAdvertising(AppBeacon.advertisingData)
         
     }
     
     /// アドバタイズ停止
     func stopAdvertising() {
-        UserDefaultsUtil.startAdvertising = false
+        UserDefaultsUtil.advertising = false
         self.peripheralManager.stopAdvertising()
     }
 }
@@ -63,7 +47,7 @@ protocol AppPeripheralManagerDelegate: class {
 extension AppPeripheralManager: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        guard UserDefaultsUtil.startAdvertising else {
+        guard UserDefaultsUtil.advertising else {
             return
         }
         self.peripheralManager.startAdvertising(AppBeacon.advertisingData)

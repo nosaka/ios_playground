@@ -7,4 +7,6 @@ target 'ios_playground' do
 
   # Pods for ios_playground
   pod 'R.swift'
+  pod 'XCGLogger', '~> 5.0.1'
+
 end

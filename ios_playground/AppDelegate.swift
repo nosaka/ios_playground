@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XCGLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
         
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -50,3 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let log: XCGLogger! = {
+    #if DEBUG
+        let log = XCGLogger.default
+        log.setup(level: .verbose, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLevel: .debug)
+        return log
+    #else
+        return nil
+    #endif
+}()
