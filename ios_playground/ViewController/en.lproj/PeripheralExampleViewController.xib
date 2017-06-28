@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PeripheralExampleViewController" customModule="ios_playground" customModuleProvider="target">
             <connections>
+                <outlet property="peripheralStateImageView" destination="wcE-ui-RcA" id="ilV-xd-nYz"/>
+                <outlet property="peripheralStateLabel" destination="sdX-9A-QSK" id="ghb-JL-NTh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +20,51 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smU-u1-o1u" userLabel="Peripheral View">
+                    <rect key="frame" x="16" y="121" width="343" height="240"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcE-ui-RcA" userLabel="Peripheral State ImageView">
+                            <rect key="frame" x="111.5" y="48" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="7Ec-BY-l61"/>
+                                <constraint firstAttribute="height" constant="120" id="AIP-iq-tFe"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdX-9A-QSK" userLabel="Peripheral State Label">
+                            <rect key="frame" x="171.5" y="216" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="sdX-9A-QSK" firstAttribute="top" secondItem="wcE-ui-RcA" secondAttribute="bottom" constant="48" id="Ytd-8T-EJx"/>
+                        <constraint firstItem="wcE-ui-RcA" firstAttribute="centerX" secondItem="smU-u1-o1u" secondAttribute="centerX" id="gHw-da-0pc"/>
+                        <constraint firstItem="sdX-9A-QSK" firstAttribute="centerX" secondItem="smU-u1-o1u" secondAttribute="centerX" id="iLF-Dg-4gy"/>
+                        <constraint firstAttribute="height" constant="240" id="jGn-46-es2"/>
+                        <constraint firstItem="wcE-ui-RcA" firstAttribute="top" secondItem="smU-u1-o1u" secondAttribute="top" constant="48" id="qqo-h1-ix5"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本画面を表示しているあいだ、Beaconのアドバタイズを開始します。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-UB-zXs" userLabel="Info Label">
+                    <rect key="frame" x="16" y="80" width="343" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="smU-u1-o1u" secondAttribute="trailing" constant="16" id="Nxz-gm-pAj"/>
+                <constraint firstItem="rsP-UB-zXs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="QCl-si-Re4"/>
+                <constraint firstItem="smU-u1-o1u" firstAttribute="top" secondItem="rsP-UB-zXs" secondAttribute="bottom" id="X5U-EV-8UH"/>
+                <constraint firstAttribute="trailing" secondItem="rsP-UB-zXs" secondAttribute="trailing" constant="16" id="sfe-O9-fYi"/>
+                <constraint firstItem="smU-u1-o1u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="vbU-O3-eHk"/>
+                <constraint firstItem="rsP-UB-zXs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="vsK-7I-V0l"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>

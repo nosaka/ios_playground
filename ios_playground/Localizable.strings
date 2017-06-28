@@ -17,12 +17,22 @@
 "alert_ttl_requestLocationAlways" = "確認";
 "alert_msg_requestLocationAlways" = "この機能を利用するには、位置情報を「常に許可する」に設定する必要があります。\n設定を確認しますか？";
 
+// MARK: Common Label
+"unknown" = "不明";
+"didDetermineStateInside" = "リージョン検知 圏内";
+"didDetermineStateOutside" = "リージョン検知 圏外";
+"didEnterRegion" = "リージョン 入";
+"didExitRegion" = "リージョン 出";
+
 // MARK: Label - Main
 "main_list_item_bluetoothPeripheral" = "Beacon発信";
 "main_list_item_bluetoothCentral" = "Beacon受信";
 
 // MARK: Label - PeripheralExaple
 "peripheralExaple_title" = "Beacon発信";
+"peripheralExaple_startAdvertising" = "アドバタイズ開始中";
+"peripheralExaple_stopAdvertising" = "アドバタイズ停止中";
+"peripheralExaple_errorAdvertising" = "エラーが発生しました";
 
 // MARK: Label - CentralExaple
 "centralExaple_title" = "Beacon受信";

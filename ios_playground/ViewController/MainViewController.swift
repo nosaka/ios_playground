@@ -39,15 +39,17 @@ class MainViewController: UIViewController {
     
     // MARK: variables
     
-    var tableData:[TableViewItem] = TableViewItem.items
+    var tableData: [TableViewItem] = TableViewItem.items
     
     // MARK: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Viewの設定
         self.edgesForExtendedLayout = []
         
+        // Selector、Delegateの設定
         self.menuTableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
@@ -74,7 +76,6 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier, for:indexPath)
         
         cell.textLabel?.text = self.tableData[indexPath.row].text
-        cell.detailTextLabel?.text = "safjahkajkahfajhfkajhkjfhkahfjkahfkhskjas"
         return cell
     }
     

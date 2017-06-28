@@ -83,3 +83,5 @@ let log: XCGLogger! = {
         return nil
     #endif
 }()
+
+let realmHelper: RealmHelper! = RealmHelper()

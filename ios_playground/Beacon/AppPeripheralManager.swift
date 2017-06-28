@@ -27,7 +27,6 @@ class AppPeripheralManager: NSObject {
     
     /// アドバタイズ開始
     func startAdvertising() {
-        CBPeripheralManager.authorizationStatus()
         self.peripheralManager.startAdvertising(AppBeacon.advertisingData)
         
     }
@@ -35,6 +34,11 @@ class AppPeripheralManager: NSObject {
     /// アドバタイズ停止
     func stopAdvertising() {
         self.peripheralManager.stopAdvertising()
+    }
+    
+    /// アドバタイズ是非
+    func isAdvertising() -> Bool {
+        return self.peripheralManager.isAdvertising
     }
 }
 /// AppPeripheralManagerDelegate

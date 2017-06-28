@@ -31,23 +31,32 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
-    /// Image `Image`.
-    static let image = Rswift.ImageResource(bundle: R.hostingBundle, name: "Image")
+    /// Image `Peripheral_Off`.
+    static let peripheral_Off = Rswift.ImageResource(bundle: R.hostingBundle, name: "Peripheral_Off")
+    /// Image `Peripheral_On`.
+    static let peripheral_On = Rswift.ImageResource(bundle: R.hostingBundle, name: "Peripheral_On")
     
-    /// `UIImage(named: "Image", bundle: ..., traitCollection: ...)`
-    static func image(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.image, compatibleWith: traitCollection)
+    /// `UIImage(named: "Peripheral_Off", bundle: ..., traitCollection: ...)`
+    static func peripheral_Off(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.peripheral_Off, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Peripheral_On", bundle: ..., traitCollection: ...)`
+    static func peripheral_On(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.peripheral_On, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `CentralExampleViewController`.
     static let centralExampleViewController = _R.nib._CentralExampleViewController()
+    /// Nib `CentralManagerLogCell`.
+    static let centralManagerLogCell = _R.nib._CentralManagerLogCell()
     /// Nib `MainViewController`.
     static let mainViewController = _R.nib._MainViewController()
     /// Nib `PeripheralExampleViewController`.
@@ -56,6 +65,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "CentralExampleViewController", in: bundle)`
     static func centralExampleViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.centralExampleViewController)
+    }
+    
+    /// `UINib(name: "CentralManagerLogCell", in: bundle)`
+    static func centralManagerLogCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.centralManagerLogCell)
     }
     
     /// `UINib(name: "MainViewController", in: bundle)`
@@ -96,7 +110,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 19 localization keys.
     struct localizable {
       /// Value: Beacon受信
       static let centralExaple_title = Rswift.StringResource(key: "centralExaple_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -112,8 +126,24 @@ struct R: Rswift.Validatable {
       static let alert_msg_requestBlePoweredOn = Rswift.StringResource(key: "alert_msg_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: この機能を利用するには、位置情報を「常に許可する」に設定する必要があります。 設定を確認しますか？
       static let alert_msg_requestLocationAlways = Rswift.StringResource(key: "alert_msg_requestLocationAlways", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: アドバタイズ停止中
+      static let peripheralExaple_stopAdvertising = Rswift.StringResource(key: "peripheralExaple_stopAdvertising", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: アドバタイズ開始中
+      static let peripheralExaple_startAdvertising = Rswift.StringResource(key: "peripheralExaple_startAdvertising", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: エラーが発生しました
+      static let peripheralExaple_errorAdvertising = Rswift.StringResource(key: "peripheralExaple_errorAdvertising", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: キャンセル
       static let alert_action_cancel = Rswift.StringResource(key: "alert_action_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: リージョン 入
+      static let didEnterRegion = Rswift.StringResource(key: "didEnterRegion", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: リージョン 出
+      static let didExitRegion = Rswift.StringResource(key: "didExitRegion", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: リージョン検知 圏内
+      static let didDetermineStateInside = Rswift.StringResource(key: "didDetermineStateInside", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: リージョン検知 圏外
+      static let didDetermineStateOutside = Rswift.StringResource(key: "didDetermineStateOutside", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: 不明
+      static let unknown = Rswift.StringResource(key: "unknown", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: 確認
       static let alert_ttl_requestBlePoweredOn = Rswift.StringResource(key: "alert_ttl_requestBlePoweredOn", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: 確認
@@ -156,9 +186,49 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("alert_msg_requestLocationAlways", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: アドバタイズ停止中
+      static func peripheralExaple_stopAdvertising(_: Void = ()) -> String {
+        return NSLocalizedString("peripheralExaple_stopAdvertising", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: アドバタイズ開始中
+      static func peripheralExaple_startAdvertising(_: Void = ()) -> String {
+        return NSLocalizedString("peripheralExaple_startAdvertising", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: エラーが発生しました
+      static func peripheralExaple_errorAdvertising(_: Void = ()) -> String {
+        return NSLocalizedString("peripheralExaple_errorAdvertising", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: キャンセル
       static func alert_action_cancel(_: Void = ()) -> String {
         return NSLocalizedString("alert_action_cancel", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: リージョン 入
+      static func didEnterRegion(_: Void = ()) -> String {
+        return NSLocalizedString("didEnterRegion", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: リージョン 出
+      static func didExitRegion(_: Void = ()) -> String {
+        return NSLocalizedString("didExitRegion", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: リージョン検知 圏内
+      static func didDetermineStateInside(_: Void = ()) -> String {
+        return NSLocalizedString("didDetermineStateInside", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: リージョン検知 圏外
+      static func didDetermineStateOutside(_: Void = ()) -> String {
+        return NSLocalizedString("didDetermineStateOutside", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: 不明
+      static func unknown(_: Void = ()) -> String {
+        return NSLocalizedString("unknown", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: 確認
@@ -203,6 +273,17 @@ struct _R {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CentralManagerLogCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CentralManagerLogCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CentralManagerLogCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CentralManagerLogCell
       }
       
       fileprivate init() {}

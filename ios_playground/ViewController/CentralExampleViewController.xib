@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CentralExampleViewController" customModule="ios_playground" customModuleProvider="target">
             <connections>
+                <outlet property="centralManagerLogTableView" destination="BCX-aP-sHC" id="gtY-i1-s49"/>
                 <outlet property="monitoringSwitch" destination="bGL-S9-ZOQ" id="Uw9-bn-BnQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,16 +21,44 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beaconの監視" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk4-oq-0Ti" userLabel="Monitoring Label">
+                    <rect key="frame" x="16" y="80" width="110" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGL-S9-ZOQ" userLabel="Monitoring Switch">
-                    <rect key="frame" x="163" y="88" width="51" height="31"/>
+                    <rect key="frame" x="310" y="75" width="51" height="31"/>
                 </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHs-FY-OwP" userLabel="Section View">
+                    <rect key="frame" x="0.0" y="114" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="dCr-6c-2UT"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BCX-aP-sHC" userLabel="CentralManagerLog TableView">
+                    <rect key="frame" x="16" y="123" width="343" height="544"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="bGL-S9-ZOQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3j3-ph-WwJ"/>
-                <constraint firstItem="bGL-S9-ZOQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="aPt-XF-wHm"/>
+                <constraint firstAttribute="trailing" secondItem="bGL-S9-ZOQ" secondAttribute="trailing" constant="16" id="0W8-xz-NZX"/>
+                <constraint firstItem="zHs-FY-OwP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9m8-5O-l1B"/>
+                <constraint firstItem="bGL-S9-ZOQ" firstAttribute="centerY" secondItem="vk4-oq-0Ti" secondAttribute="centerY" id="EEr-Tq-Oiw"/>
+                <constraint firstItem="zHs-FY-OwP" firstAttribute="top" secondItem="bGL-S9-ZOQ" secondAttribute="bottom" constant="8" id="Mc4-1H-OWq"/>
+                <constraint firstAttribute="bottom" secondItem="BCX-aP-sHC" secondAttribute="bottom" id="MrO-se-gUd"/>
+                <constraint firstAttribute="trailing" secondItem="BCX-aP-sHC" secondAttribute="trailing" constant="16" id="TWB-c0-5O4"/>
+                <constraint firstItem="BCX-aP-sHC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="caE-6T-aqd"/>
+                <constraint firstItem="vk4-oq-0Ti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="hfc-gu-6sU"/>
+                <constraint firstAttribute="trailing" secondItem="zHs-FY-OwP" secondAttribute="trailing" id="kj6-xj-bT6"/>
+                <constraint firstItem="zHs-FY-OwP" firstAttribute="top" secondItem="bGL-S9-ZOQ" secondAttribute="bottom" constant="8" symbolic="YES" id="n7O-NP-rFg"/>
+                <constraint firstItem="vk4-oq-0Ti" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="o5G-7r-G1r"/>
+                <constraint firstItem="BCX-aP-sHC" firstAttribute="top" secondItem="zHs-FY-OwP" secondAttribute="bottom" constant="8" id="vro-A4-wvN"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>
