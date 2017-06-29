@@ -67,12 +67,6 @@ class AppLocationViewController: UIViewController {
                 }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     override func viewDidDisappear(_ animated: Bool) {
         AppLocationManager.default.delegate = nil

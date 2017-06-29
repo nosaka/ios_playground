@@ -128,13 +128,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		CA3F9D261EF79AC000172EC5 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
 		CAC72A051F04BA02008CBCC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +172,6 @@
 				CA3F9D231EF78EB300172EC5 /* Util */,
 				CADFE5191EF787C400195E71 /* Beacon */,
 				CADFE5031EF7570900195E71 /* ViewController */,
-				CA3F9D261EF79AC000172EC5 /* Alert */,
 				CADFE4EF1EF7556100195E71 /* AppDelegate.swift */,
 				CADFE4F61EF7556100195E71 /* Assets.xcassets */,
 				CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */,
