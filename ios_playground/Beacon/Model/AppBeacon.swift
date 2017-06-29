@@ -14,7 +14,7 @@ class AppBeacon {
     
     static let proximityUUID: UUID          = UUID(uuidString: "36E54BC0-AA81-4D4B-A3C9-B0FF983D24E2")!
     static let identifier: String           = "ns.me.region"
-    static let localName: String            = "NSサンプルBeacon"
+    static let localName: String            = "NS example beacon"
     static let major: CLBeaconMajorValue    = 0
     static let minor: CLBeaconMinorValue    = 0
     static var beaconRegion: CLBeaconRegion {
