@@ -1,116 +1,121 @@
 //
-//  BeaconCentralViewController.swift
+//  AppLocationViewController.swift
 //  ios_playground
 //
-//  Created by Shintaro Nosaka on 2017/06/22.
+//  Created by Shintaro Nosaka on 2017/06/29.
 //  Copyright © 2017年 Shintaro Nosaka. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-/// BeaconCentralViewController
-class BeaconCentralViewController: UIViewController {
-
+class AppLocationViewController: UIViewController {
+    
     // MARK: IBOutlet
     
-    @IBOutlet weak var monitoringSwitch: UISwitch!
+    @IBOutlet weak var updateLocationSwitch: UISwitch!
     
-    @IBOutlet weak var beaconCentralManagerLogTableView: UITableView!
+    @IBOutlet weak var appLocationManagerLogTableView: UITableView!
     
     // MARK: statics
     
     // MARK: variables
     
-    fileprivate var tableData: Results<BeaconCentralManagerLog>?
+    fileprivate var tableData: Results<AppLocationManagerLog>?
     
     fileprivate var tokenTableDataResults: NotificationToken?
-
-    // MARK: UIViewController
     
+    // MARK: UIViewController
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Viewの設定
         self.title = R.string.localizable.centralExaple_title()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(self.tappedTrashBarButtonItem(_:)))
-
-        if UserDefaultsUtil.monitoring {
-            BeaconCentralManager.default.startMonitoring()
-        } else {
-            BeaconCentralManager.default.stopMonitoring()
-        }
-        self.monitoringSwitch.isOn = UserDefaultsUtil.monitoring
         
-        self.beaconCentralManagerLogTableView.register(R.nib.logCell(), forCellReuseIdentifier: LogCell.cellIdentifier)
+        if UserDefaultsUtil.updateLocation {
+            AppLocationManager.default.startUpdateLocation()
+        } else {
+            AppLocationManager.default.stopUpdateLocation()
+        }
+        self.updateLocationSwitch.isOn = UserDefaultsUtil.updateLocation
+        
+        self.appLocationManagerLogTableView.register(R.nib.logCell(), forCellReuseIdentifier: LogCell.cellIdentifier)
         
         
         // Selector、Delegateの設定
-        self.monitoringSwitch.addTarget(self, action: #selector(self.changedMonitoringSwitch(_:)), for: .valueChanged)
-        self.beaconCentralManagerLogTableView.delegate = self
-        self.beaconCentralManagerLogTableView.dataSource = self
+        self.updateLocationSwitch.addTarget(self, action: #selector(self.changedUpdateLocationSwitch(_:)), for: .valueChanged)
+        self.appLocationManagerLogTableView.delegate = self
+        self.appLocationManagerLogTableView.dataSource = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        BeaconCentralManager.default.delegate = self
+        AppLocationManager.default.delegate = self
         
-        self.tableData = realmHelper.all(BeaconCentralManagerLog.self, sorted: (BeaconCentralManagerLog.defaultSortKey, false))
+        self.tableData = realmHelper.all(AppLocationManagerLog.self, sorted: (AppLocationManagerLog.defaultSortKey, false))
         self.tokenTableDataResults =
             self.tableData?.addNotificationBlock { result in
                 switch result {
                 case .initial:
-                    self.beaconCentralManagerLogTableView.reloadData()
+                    self.appLocationManagerLogTableView.reloadData()
                 case .update:
-                    self.beaconCentralManagerLogTableView.reloadData()
+                    self.appLocationManagerLogTableView.reloadData()
                 case .error(let error):
                     log.error(error.localizedDescription)
                 }
         }
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     
     override func viewDidDisappear(_ animated: Bool) {
-        BeaconCentralManager.default.delegate = nil
+        AppLocationManager.default.delegate = nil
         self.tokenTableDataResults?.stop()
         super.viewDidDisappear(animated)
     }
     
     // MARK: selector
     
-    func changedMonitoringSwitch(_ sender: UISwitch) {
+    func changedUpdateLocationSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            BeaconCentralManager.default.startMonitoring()
+            AppLocationManager.default.startUpdateLocation()
         } else {
-            BeaconCentralManager.default.stopMonitoring()
+            AppLocationManager.default.stopUpdateLocation()
         }
     }
     
     func tappedTrashBarButtonItem(_ sender: UIBarButtonItem) {
-        realmHelper.delete(BeaconCentralManagerLog.self)
-        self.beaconCentralManagerLogTableView.reloadData()
+        realmHelper.delete(AppLocationManagerLog.self)
+        self.appLocationManagerLogTableView.reloadData()
     }
-    
+
 }
-/// BeaconCentralViewController+BeaconCentralManagerDelegate
-extension BeaconCentralViewController: BeaconCentralManagerDelegate {
+/// AppLocationViewController+AppLocationManagerDelegate
+extension AppLocationViewController: AppLocationManagerDelegate {
     
     func requestLocationAlways() {
         // モニタリング開始処理が失敗した場合はスイッチを戻した後、ダイアログを表示する
-        self.monitoringSwitch.setOn(false, animated: true)
+        self.updateLocationSwitch.setOn(false, animated: true)
         self.present(AlertFactory.requestLocationAlways.alert, animated: true, completion: nil)
-        BeaconCentralManager.default.stopMonitoring()
+        AppLocationManager.default.stopUpdateLocation()
     }
 }
-/// BeaconCentralViewController+UITableViewDelegate
-extension BeaconCentralViewController: UITableViewDelegate {
+/// AppLocationViewController+UITableViewDelegate
+extension AppLocationViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return LogCell.height
     }
     
 }
-/// BeaconCentralViewController+UITableViewDataSource
-extension BeaconCentralViewController: UITableViewDataSource {
+/// AppLocationViewController+UITableViewDataSource
+extension AppLocationViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LogCell.cellIdentifier, for:indexPath) as! LogCell

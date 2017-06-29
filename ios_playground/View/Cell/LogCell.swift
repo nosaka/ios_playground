@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CentralManagerLogCell: UITableViewCell {
+class LogCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var messageLabel: UILabel!
     
-    static let cellIdentifier: String = "centralManagerLogCell"
+    static let cellIdentifier: String = "logCell"
     
     static let height: CGFloat = 58
 

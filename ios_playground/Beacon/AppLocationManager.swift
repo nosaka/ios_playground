@@ -10,6 +10,7 @@ import Foundation
 import CoreBluetooth
 import CoreLocation
 
+/// AppLocationManager
 class AppLocationManager: NSObject {
     
     static let `default` = AppLocationManager()
@@ -47,13 +48,15 @@ class AppLocationManager: NSObject {
         }
         UserDefaultsUtil.updateLocation = true
         self.locationManager.startUpdatingLocation()
-//        realmHelper.log(CentralManagerLog: .startMonitoring)
+        log.debug("startUpdateLocation")
+        realmHelper.log(appLocationManager: .startUpdateLocation)
     }
     
     /// 位置情報更新停止
     func stopUpdateLocation() {
         UserDefaultsUtil.updateLocation = false
-//        realmHelper.log(CentralManagerLog: .stopMonitoring)
+        log.debug("stopUpdateLocation")
+        realmHelper.log(appLocationManager: .stopUpdateLocation)
     }
     
 }
@@ -66,29 +69,39 @@ extension AppLocationManager: CLLocationManagerDelegate {
     
     @available(iOS 6.0, *)
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        log.debug("didUpdateLocations")
+        realmHelper.log(appLocationManager: .didUpdateLocations)
     }
     
     @available(iOS 2.0, *)
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        log.debug("didFailWithError")
+        realmHelper.log(appLocationManager: .didFailWithError)
     }
     
     @available(iOS 6.0, *)
     public func locationManagerDidPauseLocationUpdates(_ manager: CLLocationManager) {
+        log.debug("didPauseLocationUpdates")
+        realmHelper.log(appLocationManager: .didPauseLocationUpdates)
     }
     
     @available(iOS 6.0, *)
     public func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
+        log.debug("didResumeLocationUpdates")
+        realmHelper.log(appLocationManager: .didResumeLocationUpdates)
     }
     
     @available(iOS 6.0, *)
     public func locationManager(_ manager: CLLocationManager, didFinishDeferredUpdatesWithError error: Error?) {
+        log.debug("didFinishDeferredUpdatesWithError")
+        realmHelper.log(appLocationManager: .didFinishDeferredUpdatesWithError)
     }
     
     @available(iOS 8.0, *)
     public func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
+        log.debug("didFinishDeferredUpdatesWithError")
+        realmHelper.log(appLocationManager: .didFinishDeferredUpdatesWithError)
     }
 
-
-    
 }
 

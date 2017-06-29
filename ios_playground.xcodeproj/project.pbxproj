@@ -10,8 +10,8 @@
 		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
 		CA01EFFF1F03801E00CA6C8C /* BeaconCentralManagerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01EFFE1F03801E00CA6C8C /* BeaconCentralManagerLog.swift */; };
 		CA01F0011F0387B900CA6C8C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0001F0387B900CA6C8C /* RealmHelper.swift */; };
-		CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */; };
-		CA01F0071F03988700CA6C8C /* CentralManagerLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */; };
+		CA01F0061F03988700CA6C8C /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0041F03988700CA6C8C /* LogCell.swift */; };
+		CA01F0071F03988700CA6C8C /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA01F0051F03988700CA6C8C /* LogCell.xib */; };
 		CA01F0091F039AB300CA6C8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0081F039AB300CA6C8C /* Constants.swift */; };
 		CA01F00B1F049CB100CA6C8C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F00A1F049CB100CA6C8C /* R.generated.swift */; };
 		CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC21F009341009C1837 /* NotificationFactory.swift */; };
@@ -23,6 +23,8 @@
 		CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4628811EFB853900E84317 /* AppBeacon.swift */; };
 		CAC72A041F04B625008CBCC0 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC72A031F04B625008CBCC0 /* AppLocationManager.swift */; };
 		CAC72A081F04BA9E008CBCC0 /* AppLocationManagerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC72A071F04BA9E008CBCC0 /* AppLocationManagerLog.swift */; };
+		CAC72A0F1F04C63B008CBCC0 /* AppLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC72A0D1F04C63B008CBCC0 /* AppLocationViewController.swift */; };
+		CAC72A101F04C63B008CBCC0 /* AppLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC72A0E1F04C63B008CBCC0 /* AppLocationViewController.xib */; };
 		CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4EF1EF7556100195E71 /* AppDelegate.swift */; };
 		CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F61EF7556100195E71 /* Assets.xcassets */; };
 		CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */; };
@@ -40,8 +42,8 @@
 		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA01EFFE1F03801E00CA6C8C /* BeaconCentralManagerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconCentralManagerLog.swift; sourceTree = "<group>"; };
 		CA01F0001F0387B900CA6C8C /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManagerLogCell.swift; sourceTree = "<group>"; };
-		CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralManagerLogCell.xib; sourceTree = "<group>"; };
+		CA01F0041F03988700CA6C8C /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		CA01F0051F03988700CA6C8C /* LogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
 		CA01F0081F039AB300CA6C8C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CA01F00A1F049CB100CA6C8C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CA15CCC21F009341009C1837 /* NotificationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		CA4628811EFB853900E84317 /* AppBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBeacon.swift; sourceTree = "<group>"; };
 		CAC72A031F04B625008CBCC0 /* AppLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationManager.swift; sourceTree = "<group>"; };
 		CAC72A071F04BA9E008CBCC0 /* AppLocationManagerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationManagerLog.swift; sourceTree = "<group>"; };
+		CAC72A0D1F04C63B008CBCC0 /* AppLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationViewController.swift; sourceTree = "<group>"; };
+		CAC72A0E1F04C63B008CBCC0 /* AppLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppLocationViewController.xib; sourceTree = "<group>"; };
 		CADFE4EC1EF7556100195E71 /* ios_playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFE4EF1EF7556100195E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CADFE4F61EF7556100195E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,8 +111,8 @@
 		CA01F0031F03984800CA6C8C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */,
-				CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */,
+				CA01F0041F03988700CA6C8C /* LogCell.swift */,
+				CA01F0051F03988700CA6C8C /* LogCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -194,6 +198,8 @@
 				CADFE5151EF776CB00195E71 /* BeaconPeripheralViewController.xib */,
 				CA46287B1EFB781500E84317 /* BeaconCentralViewController.swift */,
 				CA46287C1EFB781500E84317 /* BeaconCentralViewController.xib */,
+				CAC72A0D1F04C63B008CBCC0 /* AppLocationViewController.swift */,
+				CAC72A0E1F04C63B008CBCC0 /* AppLocationViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -290,9 +296,10 @@
 				CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */,
 				CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */,
 				CADFE5131EF776CB00195E71 /* BeaconPeripheralViewController.xib in Resources */,
-				CA01F0071F03988700CA6C8C /* CentralManagerLogCell.xib in Resources */,
+				CA01F0071F03988700CA6C8C /* LogCell.xib in Resources */,
 				CA46287E1EFB781500E84317 /* BeaconCentralViewController.xib in Resources */,
 				CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */,
+				CAC72A101F04C63B008CBCC0 /* AppLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +376,7 @@
 				CADFE51C1EF7881600195E71 /* BeaconPeripheralManager.swift in Sources */,
 				CA01F00B1F049CB100CA6C8C /* R.generated.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
-				CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */,
+				CA01F0061F03988700CA6C8C /* LogCell.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,
 				CA01F0091F039AB300CA6C8C /* Constants.swift in Sources */,
 				CA46287D1EFB781500E84317 /* BeaconCentralViewController.swift in Sources */,
@@ -380,6 +387,7 @@
 				CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */,
 				CA01F0011F0387B900CA6C8C /* RealmHelper.swift in Sources */,
 				CAC72A081F04BA9E008CBCC0 /* AppLocationManagerLog.swift in Sources */,
+				CAC72A0F1F04C63B008CBCC0 /* AppLocationViewController.swift in Sources */,
 				CA4628801EFB849F00E84317 /* BeaconCentralManager.swift in Sources */,
 				CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */,
 			);

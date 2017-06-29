@@ -20,9 +20,9 @@
 // MARK: Common Label
 "unknown" = "不明";
 
+"beaconCentralManagerLogType_unknown" = "不明";
 "beaconCentralManagerLogType_launchByLocation" = "位置情報による起動";
 "beaconCentralManagerLogType_terminateApplication" = "プロセス終了";
-"beaconCentralManagerLogType_unknown" = "不明";
 "beaconCentralManagerLogType_startMonitoring" = "監視開始";
 "beaconCentralManagerLogType_stopMonitoring" = "監視停止";
 "beaconCentralManagerLogType_didDetermineStateInside" = "検知 圏内";
@@ -30,15 +30,17 @@
 "beaconCentralManagerLogType_didEnterRegion" = "リージョンに入りました";
 "beaconCentralManagerLogType_didExitRegion" = "リージョンから出ました";
 
-"appLocationManagerLogType_unknown" = "XXX";
-"appLocationManagerLogType_launchByLocation" = "XXX";
-"appLocationManagerLogType_terminateApplication" = "XXX";
-"appLocationManagerLogType_didUpdateLocations" = "XXX";
-"appLocationManagerLogType_didFailWithError" = "XXX";
-"appLocationManagerLogType_didPauseLocationUpdates" = "XXX";
-"appLocationManagerLogType_didResumeLocationUpdates" = "XXX";
-"appLocationManagerLogType_didFinishDeferredUpdatesWithError" = "XXX";
-"appLocationManagerLogType_didVisit" = "XXX";
+"appLocationManagerLogType_unknown" = "不明";
+"appLocationManagerLogType_launchByLocation" = "位置情報による起動";
+"appLocationManagerLogType_terminateApplication" = "プロセス終了";
+"appLocationManagerLogType_startUpdateLocation" = "更新開始";
+"appLocationManagerLogType_stopUpdateLocation" = "更新停止";
+"appLocationManagerLogType_didUpdateLocations" = "位置情報更新 成功";
+"appLocationManagerLogType_didFailWithError" = "位置情報更新 エラー";
+"appLocationManagerLogType_didPauseLocationUpdates" = "位置情報更新 一時停止";
+"appLocationManagerLogType_didResumeLocationUpdates" = "位置情報更新 一時停止";
+"appLocationManagerLogType_didFinishDeferredUpdatesWithError" = "位置情報更新延期処理 エラー";
+"appLocationManagerLogType_didVisit" = "訪問";
 
 
 // MARK: Label - Main

@@ -32,6 +32,8 @@ enum AppLocationManagerLogType: Int {
     case unknown
     case launchByLocation
     case terminateApplication
+    case startUpdateLocation
+    case stopUpdateLocation
     case didUpdateLocations
     case didFailWithError
     case didPauseLocationUpdates
@@ -55,6 +57,10 @@ enum AppLocationManagerLogType: Int {
                 return R.string.localizable.appLocationManagerLogType_launchByLocation()
             case .terminateApplication:
                 return R.string.localizable.appLocationManagerLogType_terminateApplication()
+            case .startUpdateLocation:
+                return R.string.localizable.appLocationManagerLogType_startUpdateLocation()
+            case .stopUpdateLocation:
+                return R.string.localizable.appLocationManagerLogType_stopUpdateLocation()
             case .didUpdateLocations:
                 return R.string.localizable.appLocationManagerLogType_didUpdateLocations()
             case .didFailWithError:

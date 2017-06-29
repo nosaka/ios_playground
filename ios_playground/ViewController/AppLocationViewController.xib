@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppLocationViewController" customModule="ios_playground" customModuleProvider="target">
+            <connections>
+                <outlet property="appLocationManagerLogTableView" destination="k2r-di-C0P" id="Yim-3t-Ff9"/>
+                <outlet property="updateLocationSwitch" destination="2uI-VY-XlG" id="Una-O3-zUj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="位置情報の更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC2-h3-hAj" userLabel="Update Location Label">
+                    <rect key="frame" x="16" y="80" width="122" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2uI-VY-XlG" userLabel="Update Location Switch">
+                    <rect key="frame" x="310" y="75" width="51" height="31"/>
+                </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbJ-jM-33O" userLabel="Section View">
+                    <rect key="frame" x="0.0" y="114" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tQ2-x8-rlN"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k2r-di-C0P" userLabel="AppLocationManagerLog TableView">
+                    <rect key="frame" x="0.0" y="123" width="375" height="544"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zC2-h3-hAj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="5B8-px-CMU"/>
+                <constraint firstAttribute="trailing" secondItem="NbJ-jM-33O" secondAttribute="trailing" id="8fq-Fw-dRy"/>
+                <constraint firstAttribute="trailing" secondItem="2uI-VY-XlG" secondAttribute="trailing" constant="16" id="Bcp-Lq-lRj"/>
+                <constraint firstItem="NbJ-jM-33O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mjn-jQ-UAI"/>
+                <constraint firstAttribute="bottom" secondItem="k2r-di-C0P" secondAttribute="bottom" id="ULJ-Fc-78l"/>
+                <constraint firstItem="2uI-VY-XlG" firstAttribute="centerY" secondItem="zC2-h3-hAj" secondAttribute="centerY" id="UVt-Er-4gC"/>
+                <constraint firstItem="zC2-h3-hAj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="jaL-co-8AE"/>
+                <constraint firstItem="k2r-di-C0P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o70-E6-1UJ"/>
+                <constraint firstItem="NbJ-jM-33O" firstAttribute="top" secondItem="2uI-VY-XlG" secondAttribute="bottom" constant="8" id="q27-HI-1am"/>
+                <constraint firstItem="k2r-di-C0P" firstAttribute="top" secondItem="NbJ-jM-33O" secondAttribute="bottom" constant="8" id="v6h-FU-Gc7"/>
+                <constraint firstAttribute="trailing" secondItem="k2r-di-C0P" secondAttribute="trailing" id="zjo-2X-rNY"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="72.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -10,6 +10,7 @@ import Foundation
 import CoreBluetooth
 import CoreLocation
 
+/// BeaconCentralManager
 class BeaconCentralManager: NSObject {
 
     static let `default` = BeaconCentralManager()
