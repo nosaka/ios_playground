@@ -1,5 +1,5 @@
 //
-//  AppCentralManager.swift
+//  BeaconCentralManager.swift
 //  ios_playground
 //
 //  Created by Shintaro Nosaka on 2017/06/22.
@@ -10,11 +10,11 @@ import Foundation
 import CoreBluetooth
 import CoreLocation
 
-class AppCentralManager: NSObject {
+class BeaconCentralManager: NSObject {
 
-    static let `default` = AppCentralManager()
+    static let `default` = BeaconCentralManager()
     
-    var delegate: AppCentralManagerDelegate?
+    var delegate: BeaconCentralManagerDelegate?
     
     var locationManager = CLLocationManager()
     
@@ -50,7 +50,7 @@ class AppCentralManager: NSObject {
             return
         }
         self.locationManager.startMonitoring(for: AppBeacon.beaconRegion)
-        realmHelper.log(CentralManagerLog: .startMonitoring)
+        realmHelper.log(beaconCentralManager: .startMonitoring)
     }
     
     /// モニタリング停止
@@ -61,7 +61,7 @@ class AppCentralManager: NSObject {
             return
         }
         self.locationManager.stopMonitoring(for: AppBeacon.beaconRegion)
-        realmHelper.log(CentralManagerLog: .stopMonitoring)
+        realmHelper.log(beaconCentralManager: .stopMonitoring)
     }
     
     func isMonitoring() -> Bool {
@@ -74,12 +74,12 @@ class AppCentralManager: NSObject {
     }
     
 }
-/// AppCentralManagerDelegate
-protocol AppCentralManagerDelegate: class {
+/// BeaconCentralManagerDelegate
+protocol BeaconCentralManagerDelegate: class {
     func requestLocationAlways()
 }
-/// AppCentralManager+CLLocationManagerDelegate
-extension AppCentralManager: CLLocationManagerDelegate {
+/// BeaconCentralManager+CLLocationManagerDelegate
+extension BeaconCentralManager: CLLocationManagerDelegate {
     
     @available(iOS 7.0, *)
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
@@ -89,11 +89,11 @@ extension AppCentralManager: CLLocationManagerDelegate {
         switch state {
         case .inside:
             log.debug("didDetermineState inside")
-            realmHelper.log(CentralManagerLog: .didDetermineStateInside)
+            realmHelper.log(beaconCentralManager: .didDetermineStateInside)
             self.locationManager.startRangingBeacons(in: region)
         case .outside:
             log.debug("didDetermineState outside")
-            realmHelper.log(CentralManagerLog: .didDetermineStateOutside)
+            realmHelper.log(beaconCentralManager: .didDetermineStateOutside)
             self.locationManager.stopRangingBeacons(in: region)
         default:
             break
@@ -103,14 +103,14 @@ extension AppCentralManager: CLLocationManagerDelegate {
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         log.debug("didEnterRegion")
-        realmHelper.log(CentralManagerLog: .didEnterRegion)
+        realmHelper.log(beaconCentralManager: .didEnterRegion)
         NotificationFactory.enterRegion.notify()
     }
     
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         log.debug("didExitRegion")
-        realmHelper.log(CentralManagerLog: .didExitRegion)
+        realmHelper.log(beaconCentralManager: .didExitRegion)
         NotificationFactory.exitRegion.notify()
     }
 

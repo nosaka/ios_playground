@@ -1,5 +1,5 @@
 //
-//  CentralExampleViewController.swift
+//  BeaconCentralViewController.swift
 //  ios_playground
 //
 //  Created by Shintaro Nosaka on 2017/06/22.
@@ -9,7 +9,8 @@
 import UIKit
 import RealmSwift
 
-class CentralExampleViewController: UIViewController {
+/// BeaconCentralViewController
+class BeaconCentralViewController: UIViewController {
 
     // MARK: IBOutlet
     
@@ -21,7 +22,7 @@ class CentralExampleViewController: UIViewController {
     
     // MARK: variables
     
-    fileprivate var tableData: Results<CentralManagerLog>?
+    fileprivate var tableData: Results<BeaconCentralManagerLog>?
     
     fileprivate var tokenCentralManagerLog: NotificationToken?
 
@@ -35,9 +36,9 @@ class CentralExampleViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(self.tappedTrashBarButtonItem(_:)))
 
         if UserDefaultsUtil.monitoring {
-            AppCentralManager.default.startMonitoring()
+            BeaconCentralManager.default.startMonitoring()
         } else {
-            AppCentralManager.default.stopMonitoring()
+            BeaconCentralManager.default.stopMonitoring()
         }
         self.monitoringSwitch.isOn = UserDefaultsUtil.monitoring
         
@@ -52,9 +53,9 @@ class CentralExampleViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AppCentralManager.default.delegate = self
+        BeaconCentralManager.default.delegate = self
         
-        self.tableData = realmHelper.all(CentralManagerLog.self, sorted: (CentralManagerLog.defaultSortKey, false))
+        self.tableData = realmHelper.all(BeaconCentralManagerLog.self, sorted: (BeaconCentralManagerLog.defaultSortKey, false))
         self.tokenCentralManagerLog =
             self.tableData?.addNotificationBlock { result in
                 switch result {
@@ -69,7 +70,7 @@ class CentralExampleViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        AppCentralManager.default.delegate = nil
+        BeaconCentralManager.default.delegate = nil
         self.tokenCentralManagerLog?.stop()
         super.viewDidDisappear(animated)
     }
@@ -78,38 +79,38 @@ class CentralExampleViewController: UIViewController {
     
     func changedMonitoringSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            AppCentralManager.default.startMonitoring()
+            BeaconCentralManager.default.startMonitoring()
         } else {
-            AppCentralManager.default.stopMonitoring()
+            BeaconCentralManager.default.stopMonitoring()
         }
     }
     
     func tappedTrashBarButtonItem(_ sender: UIBarButtonItem) {
-        realmHelper.delete(CentralManagerLog.self)
+        realmHelper.delete(BeaconCentralManagerLog.self)
         self.centralManagerLogTableView.reloadData()
     }
     
 }
-
-extension CentralExampleViewController: AppCentralManagerDelegate {
+/// BeaconCentralViewController+BeaconCentralManagerDelegate
+extension BeaconCentralViewController: BeaconCentralManagerDelegate {
     
     func requestLocationAlways() {
         // モニタリング開始処理が失敗した場合はスイッチを戻した後、ダイアログを表示する
         self.monitoringSwitch.setOn(false, animated: true)
         self.present(AlertFactory.requestLocationAlways.alert, animated: true, completion: nil)
-        AppCentralManager.default.stopMonitoring()
+        BeaconCentralManager.default.stopMonitoring()
     }
 }
-/// CentralExampleViewController+UITableViewDelegate
-extension CentralExampleViewController: UITableViewDelegate {
+/// BeaconCentralViewController+UITableViewDelegate
+extension BeaconCentralViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CentralManagerLogCell.height
     }
     
 }
-/// CentralExampleViewController+UITableViewDataSource
-extension CentralExampleViewController: UITableViewDataSource {
+/// BeaconCentralViewController+UITableViewDataSource
+extension BeaconCentralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CentralManagerLogCell.cellIdentifier, for:indexPath) as! CentralManagerLogCell

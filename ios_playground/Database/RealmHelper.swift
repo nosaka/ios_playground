@@ -11,10 +11,21 @@ import RealmSwift
 
 class RealmHelper {
     
-    /// Logging by CentralManagerLog
-    func log(CentralManagerLog logType: CentralManagerLogType) {
+    /// Logging by BeaconCentralManagerLog
+    func log(beaconCentralManager logType: BeaconCentralManagerLogType) {
         let realm = try! Realm()
-        let newItem = CentralManagerLog()
+        let newItem = BeaconCentralManagerLog()
+        try! realm.write {
+            newItem.time = Date()
+            newItem.logType = logType
+            realm.add(newItem)
+        }
+    }
+    
+    /// Logging by AppLocationManagerLog
+    func log(appLocationManager logType: AppLocationManagerLogType) {
+        let realm = try! Realm()
+        let newItem = AppLocationManagerLog()
         try! realm.write {
             newItem.time = Date()
             newItem.logType = logType

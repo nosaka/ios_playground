@@ -1,5 +1,5 @@
 //
-//  AppPeripheralManager.swift
+//  BeaconPeripheralManager.swift
 //  ios_playground
 //
 //  Created by Shintaro Nosaka on 2017/06/19.
@@ -11,11 +11,11 @@ import CoreBluetooth
 import CoreLocation
 
 
-class AppPeripheralManager: NSObject {
+class BeaconPeripheralManager: NSObject {
     
-    static let `default` = AppPeripheralManager()
+    static let `default` = BeaconPeripheralManager()
     
-    var delegate: AppPeripheralManagerDelegate?
+    var delegate: BeaconPeripheralManagerDelegate?
     
     var peripheralManager = CBPeripheralManager()
     
@@ -41,12 +41,12 @@ class AppPeripheralManager: NSObject {
         return self.peripheralManager.isAdvertising
     }
 }
-/// AppPeripheralManagerDelegate
-protocol AppPeripheralManagerDelegate: class {
+/// BeaconPeripheralManagerDelegate
+protocol BeaconPeripheralManagerDelegate: class {
     func didUpdateBleState(peripheral: CBPeripheralManager)
 }
 /// AppPeripheralManager+CBPeripheralManagerDelegate
-extension AppPeripheralManager: CBPeripheralManagerDelegate {
+extension BeaconPeripheralManager: CBPeripheralManagerDelegate {
     
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         switch peripheral.state {

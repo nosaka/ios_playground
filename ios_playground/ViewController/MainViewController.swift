@@ -63,9 +63,9 @@ extension MainViewController: UITableViewDelegate {
         let item = self.tableData[indexPath.row]
         switch item {
         case .bluetoothCentral:
-            self.navigationController?.pushViewController(CentralExampleViewController(), animated: true)
+            self.navigationController?.pushViewController(BeaconCentralViewController(), animated: true)
         case .bluetoothPeripheral:
-            self.navigationController?.pushViewController(PeripheralExampleViewController(), animated: true)
+            self.navigationController?.pushViewController(BeaconPeripheralViewController(), animated: true)
         }
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71657EC92C31F1FACAE95960 /* Pods_ios_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */; };
-		CA01EFFF1F03801E00CA6C8C /* CentralManagerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01EFFE1F03801E00CA6C8C /* CentralManagerLog.swift */; };
+		CA01EFFF1F03801E00CA6C8C /* BeaconCentralManagerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01EFFE1F03801E00CA6C8C /* BeaconCentralManagerLog.swift */; };
 		CA01F0011F0387B900CA6C8C /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0001F0387B900CA6C8C /* RealmHelper.swift */; };
 		CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */; };
 		CA01F0071F03988700CA6C8C /* CentralManagerLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */; };
@@ -17,26 +17,28 @@
 		CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC21F009341009C1837 /* NotificationFactory.swift */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
-		CA46287D1EFB781500E84317 /* CentralExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */; };
-		CA46287E1EFB781500E84317 /* CentralExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */; };
-		CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287F1EFB849F00E84317 /* AppCentralManager.swift */; };
+		CA46287D1EFB781500E84317 /* BeaconCentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287B1EFB781500E84317 /* BeaconCentralViewController.swift */; };
+		CA46287E1EFB781500E84317 /* BeaconCentralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46287C1EFB781500E84317 /* BeaconCentralViewController.xib */; };
+		CA4628801EFB849F00E84317 /* BeaconCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287F1EFB849F00E84317 /* BeaconCentralManager.swift */; };
 		CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4628811EFB853900E84317 /* AppBeacon.swift */; };
+		CAC72A041F04B625008CBCC0 /* AppLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC72A031F04B625008CBCC0 /* AppLocationManager.swift */; };
+		CAC72A081F04BA9E008CBCC0 /* AppLocationManagerLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC72A071F04BA9E008CBCC0 /* AppLocationManagerLog.swift */; };
 		CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE4EF1EF7556100195E71 /* AppDelegate.swift */; };
 		CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F61EF7556100195E71 /* Assets.xcassets */; };
 		CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADFE4F81EF7556100195E71 /* LaunchScreen.storyboard */; };
 		CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE5041EF7579300195E71 /* MainViewController.swift */; };
 		CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5051EF7579300195E71 /* MainViewController.xib */; };
-		CADFE50F1EF76AF200195E71 /* PeripheralExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */; };
+		CADFE50F1EF76AF200195E71 /* BeaconPeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE50D1EF76AF200195E71 /* BeaconPeripheralViewController.swift */; };
 		CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5111EF76D7900195E71 /* Localizable.strings */; };
-		CADFE5131EF776CB00195E71 /* PeripheralExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */; };
-		CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */; };
+		CADFE5131EF776CB00195E71 /* BeaconPeripheralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CADFE5151EF776CB00195E71 /* BeaconPeripheralViewController.xib */; };
+		CADFE51C1EF7881600195E71 /* BeaconPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADFE51B1EF7881600195E71 /* BeaconPeripheralManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		402F24431E2E2ED06C8B555E /* Pods-ios_playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.release.xcconfig"; sourceTree = "<group>"; };
 		56F9A7AFE2330ADD0B91C1A2 /* Pods-ios_playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_playground.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios_playground/Pods-ios_playground.debug.xcconfig"; sourceTree = "<group>"; };
 		7D342DB9B1D76A53DCEB421D /* Pods_ios_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA01EFFE1F03801E00CA6C8C /* CentralManagerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManagerLog.swift; sourceTree = "<group>"; };
+		CA01EFFE1F03801E00CA6C8C /* BeaconCentralManagerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconCentralManagerLog.swift; sourceTree = "<group>"; };
 		CA01F0001F0387B900CA6C8C /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManagerLogCell.swift; sourceTree = "<group>"; };
 		CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralManagerLogCell.xib; sourceTree = "<group>"; };
@@ -45,10 +47,12 @@
 		CA15CCC21F009341009C1837 /* NotificationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
-		CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralExampleViewController.swift; sourceTree = "<group>"; };
-		CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralExampleViewController.xib; sourceTree = "<group>"; };
-		CA46287F1EFB849F00E84317 /* AppCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCentralManager.swift; sourceTree = "<group>"; };
+		CA46287B1EFB781500E84317 /* BeaconCentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconCentralViewController.swift; sourceTree = "<group>"; };
+		CA46287C1EFB781500E84317 /* BeaconCentralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeaconCentralViewController.xib; sourceTree = "<group>"; };
+		CA46287F1EFB849F00E84317 /* BeaconCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconCentralManager.swift; sourceTree = "<group>"; };
 		CA4628811EFB853900E84317 /* AppBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBeacon.swift; sourceTree = "<group>"; };
+		CAC72A031F04B625008CBCC0 /* AppLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationManager.swift; sourceTree = "<group>"; };
+		CAC72A071F04BA9E008CBCC0 /* AppLocationManagerLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLocationManagerLog.swift; sourceTree = "<group>"; };
 		CADFE4EC1EF7556100195E71 /* ios_playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADFE4EF1EF7556100195E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CADFE4F61EF7556100195E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,10 +60,10 @@
 		CADFE4FB1EF7556100195E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CADFE5041EF7579300195E71 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CADFE5051EF7579300195E71 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralExampleViewController.swift; sourceTree = "<group>"; };
+		CADFE50D1EF76AF200195E71 /* BeaconPeripheralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconPeripheralViewController.swift; sourceTree = "<group>"; };
 		CADFE5111EF76D7900195E71 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		CADFE5181EF7773800195E71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PeripheralExampleViewController.xib; sourceTree = "<group>"; };
-		CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPeripheralManager.swift; sourceTree = "<group>"; };
+		CADFE5181EF7773800195E71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BeaconPeripheralViewController.xib; sourceTree = "<group>"; };
+		CADFE51B1EF7881600195E71 /* BeaconPeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconPeripheralManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,7 @@
 		CA01EFFD1F037FFE00CA6C8C /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				CA01EFFE1F03801E00CA6C8C /* CentralManagerLog.swift */,
+				CAC72A051F04BA02008CBCC0 /* Model */,
 				CA01F0001F0387B900CA6C8C /* RealmHelper.swift */,
 			);
 			path = Database;
@@ -125,6 +129,23 @@
 			children = (
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		CAC72A051F04BA02008CBCC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAC72A071F04BA9E008CBCC0 /* AppLocationManagerLog.swift */,
+				CA01EFFE1F03801E00CA6C8C /* BeaconCentralManagerLog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAC72A061F04BA4A008CBCC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA4628811EFB853900E84317 /* AppBeacon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CADFE4E31EF7556100195E71 = {
@@ -169,10 +190,10 @@
 			children = (
 				CADFE5041EF7579300195E71 /* MainViewController.swift */,
 				CADFE5051EF7579300195E71 /* MainViewController.xib */,
-				CADFE50D1EF76AF200195E71 /* PeripheralExampleViewController.swift */,
-				CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */,
-				CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */,
-				CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */,
+				CADFE50D1EF76AF200195E71 /* BeaconPeripheralViewController.swift */,
+				CADFE5151EF776CB00195E71 /* BeaconPeripheralViewController.xib */,
+				CA46287B1EFB781500E84317 /* BeaconCentralViewController.swift */,
+				CA46287C1EFB781500E84317 /* BeaconCentralViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -180,9 +201,10 @@
 		CADFE5191EF787C400195E71 /* Beacon */ = {
 			isa = PBXGroup;
 			children = (
-				CADFE51B1EF7881600195E71 /* AppPeripheralManager.swift */,
-				CA46287F1EFB849F00E84317 /* AppCentralManager.swift */,
-				CA4628811EFB853900E84317 /* AppBeacon.swift */,
+				CAC72A061F04BA4A008CBCC0 /* Model */,
+				CAC72A031F04B625008CBCC0 /* AppLocationManager.swift */,
+				CADFE51B1EF7881600195E71 /* BeaconPeripheralManager.swift */,
+				CA46287F1EFB849F00E84317 /* BeaconCentralManager.swift */,
 			);
 			path = Beacon;
 			sourceTree = "<group>";
@@ -267,9 +289,9 @@
 				CADFE4FA1EF7556100195E71 /* LaunchScreen.storyboard in Resources */,
 				CADFE5071EF7579300195E71 /* MainViewController.xib in Resources */,
 				CADFE4F71EF7556100195E71 /* Assets.xcassets in Resources */,
-				CADFE5131EF776CB00195E71 /* PeripheralExampleViewController.xib in Resources */,
+				CADFE5131EF776CB00195E71 /* BeaconPeripheralViewController.xib in Resources */,
 				CA01F0071F03988700CA6C8C /* CentralManagerLogCell.xib in Resources */,
-				CA46287E1EFB781500E84317 /* CentralExampleViewController.xib in Resources */,
+				CA46287E1EFB781500E84317 /* BeaconCentralViewController.xib in Resources */,
 				CADFE5121EF76D7900195E71 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,19 +366,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */,
-				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
+				CADFE51C1EF7881600195E71 /* BeaconPeripheralManager.swift in Sources */,
 				CA01F00B1F049CB100CA6C8C /* R.generated.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,
 				CA01F0091F039AB300CA6C8C /* Constants.swift in Sources */,
-				CA46287D1EFB781500E84317 /* CentralExampleViewController.swift in Sources */,
-				CA01EFFF1F03801E00CA6C8C /* CentralManagerLog.swift in Sources */,
-				CADFE50F1EF76AF200195E71 /* PeripheralExampleViewController.swift in Sources */,
+				CA46287D1EFB781500E84317 /* BeaconCentralViewController.swift in Sources */,
+				CAC72A041F04B625008CBCC0 /* AppLocationManager.swift in Sources */,
+				CA01EFFF1F03801E00CA6C8C /* BeaconCentralManagerLog.swift in Sources */,
+				CADFE50F1EF76AF200195E71 /* BeaconPeripheralViewController.swift in Sources */,
 				CA4628821EFB853900E84317 /* AppBeacon.swift in Sources */,
 				CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */,
 				CA01F0011F0387B900CA6C8C /* RealmHelper.swift in Sources */,
-				CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */,
+				CAC72A081F04BA9E008CBCC0 /* AppLocationManagerLog.swift in Sources */,
+				CA4628801EFB849F00E84317 /* BeaconCentralManager.swift in Sources */,
 				CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,12 +396,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		CADFE5151EF776CB00195E71 /* PeripheralExampleViewController.xib */ = {
+		CADFE5151EF776CB00195E71 /* BeaconPeripheralViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CADFE5181EF7773800195E71 /* en */,
 			);
-			name = PeripheralExampleViewController.xib;
+			name = BeaconPeripheralViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         if let value = launchOptions?[UIApplicationLaunchOptionsKey.location] as? Bool, value {
-            realmHelper.log(CentralManagerLog: .launchByLocation)
-            AppCentralManager.default.initLaunch()
+            realmHelper.log(beaconCentralManager: .launchByLocation)
+            BeaconCentralManager.default.initLaunch()
             return true
         }
         
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        realmHelper.log(CentralManagerLog: .terminate)
+        realmHelper.log(beaconCentralManager: .terminateApplication)
     }
     
     /// View初期化処理

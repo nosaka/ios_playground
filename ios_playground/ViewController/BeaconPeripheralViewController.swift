@@ -1,5 +1,5 @@
 //
-//  PeripheralExampleViewController.swift
+//  BeaconPeripheralViewController.swift
 //  ios_playground
 //
 //  Created by Shintaro Nosaka on 2017/06/19.
@@ -11,7 +11,8 @@ import CoreBluetooth
 import CoreLocation
 import Rswift
 
-class PeripheralExampleViewController: UIViewController {
+/// BeaconPeripheralViewController
+class BeaconPeripheralViewController: UIViewController {
     
     // MARK: IBOutlet
     
@@ -36,8 +37,8 @@ class PeripheralExampleViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.willEnterForeground(sender:)),
                                                name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        AppPeripheralManager.default.startAdvertising()
-        AppPeripheralManager.default.delegate = self
+        BeaconPeripheralManager.default.startAdvertising()
+        BeaconPeripheralManager.default.delegate = self
         
         self.setLayoutStartAdvertising()
         
@@ -46,13 +47,13 @@ class PeripheralExampleViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
 
-        AppPeripheralManager.default.delegate = nil
-        AppPeripheralManager.default.stopAdvertising()
+        BeaconPeripheralManager.default.delegate = nil
+        BeaconPeripheralManager.default.stopAdvertising()
         super.viewDidDisappear(animated)
     }
     
     func willEnterForeground(sender: Any) {
-        if AppPeripheralManager.default.isAdvertising() {
+        if BeaconPeripheralManager.default.isAdvertising() {
             self.setLayoutStartAdvertising()
         } else {
             self.setLayoutStopAdvertising()
@@ -89,20 +90,20 @@ class PeripheralExampleViewController: UIViewController {
     }
 
 }
-
-extension PeripheralExampleViewController: AppPeripheralManagerDelegate {
+/// BeaconPeripheralViewController+BeaconPeripheralManagerDelegate
+extension BeaconPeripheralViewController: BeaconPeripheralManagerDelegate {
     
     func didUpdateBleState(peripheral: CBPeripheralManager) {
         switch peripheral.state {
         case .poweredOn:
-            AppPeripheralManager.default.startAdvertising()
+            BeaconPeripheralManager.default.startAdvertising()
             self.setLayoutStartAdvertising()
         case .poweredOff:
             self.present(AlertFactory.requestBlePoweredOn(okHandler: nil).alert, animated: true, completion: nil)
-            AppPeripheralManager.default.stopAdvertising()
+            BeaconPeripheralManager.default.stopAdvertising()
             self.setLayoutStopAdvertising()
         default:
-            AppPeripheralManager.default.stopAdvertising()
+            BeaconPeripheralManager.default.stopAdvertising()
             self.setLayoutErrorAdvertising()
         }
     }

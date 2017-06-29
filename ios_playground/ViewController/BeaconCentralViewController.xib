@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CentralExampleViewController" customModule="ios_playground" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeaconCentralManager" customModule="ios_playground" customModuleProvider="target">
             <connections>
                 <outlet property="centralManagerLogTableView" destination="BCX-aP-sHC" id="gtY-i1-s49"/>
                 <outlet property="monitoringSwitch" destination="bGL-S9-ZOQ" id="Uw9-bn-BnQ"/>

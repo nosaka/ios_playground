@@ -10,6 +10,7 @@ import Foundation
 /// UserDefaults Keys
 class UserDefaultsKey {
     static let startMonitoring = "keyStartMonitoring"
+    static let updateLocation = "keyUpdateLocation"
 }
 /// UserDefaults Utility
 class UserDefaultsUtil {
@@ -23,16 +24,28 @@ class UserDefaultsUtil {
     /// 初期処理
     /// 各種設定のデフォルト値を登録する
     func initialize() {
-        UserDefaults.standard.register(defaults: [UserDefaultsKey.startMonitoring : false])
+        UserDefaults.standard.register(defaults: [UserDefaultsKey.startMonitoring : false,
+                                                  UserDefaultsKey.updateLocation : false])
     }
     
-    /// モニタリングフラグ
+    /// リージョンモニタリングフラグ
     class var monitoring:Bool {
         get {
             return UserDefaults.standard.bool(forKey: UserDefaultsKey.startMonitoring)
         }
         set {
             UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.startMonitoring)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    /// 位置情報更新フラグ
+    class var updateLocation:Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaultsKey.updateLocation)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.updateLocation)
             UserDefaults.standard.synchronize()
         }
     }

@@ -19,15 +19,27 @@
 
 // MARK: Common Label
 "unknown" = "不明";
-"centralManagerLogType_launchByLocation" = "位置情報による起動";
-"centralManagerLogType_terminate" = "プロセス終了";
-"centralManagerLogType_unknown" = "不明";
-"centralManagerLogType_startMonitoring" = "監視開始";
-"centralManagerLogType_stopMonitoring" = "監視停止";
-"centralManagerLogType_didDetermineStateInside" = "検知 圏内";
-"centralManagerLogType_didDetermineStateOutside" = "検知 圏外";
-"centralManagerLogType_didEnterRegion" = "リージョンに入りました";
-"centralManagerLogType_didExitRegion" = "リージョンから出ました";
+
+"beaconCentralManagerLogType_launchByLocation" = "位置情報による起動";
+"beaconCentralManagerLogType_terminateApplication" = "プロセス終了";
+"beaconCentralManagerLogType_unknown" = "不明";
+"beaconCentralManagerLogType_startMonitoring" = "監視開始";
+"beaconCentralManagerLogType_stopMonitoring" = "監視停止";
+"beaconCentralManagerLogType_didDetermineStateInside" = "検知 圏内";
+"beaconCentralManagerLogType_didDetermineStateOutside" = "検知 圏外";
+"beaconCentralManagerLogType_didEnterRegion" = "リージョンに入りました";
+"beaconCentralManagerLogType_didExitRegion" = "リージョンから出ました";
+
+"appLocationManagerLogType_unknown" = "XXX";
+"appLocationManagerLogType_launchByLocation" = "XXX";
+"appLocationManagerLogType_terminateApplication" = "XXX";
+"appLocationManagerLogType_didUpdateLocations" = "XXX";
+"appLocationManagerLogType_didFailWithError" = "XXX";
+"appLocationManagerLogType_didPauseLocationUpdates" = "XXX";
+"appLocationManagerLogType_didResumeLocationUpdates" = "XXX";
+"appLocationManagerLogType_didFinishDeferredUpdatesWithError" = "XXX";
+"appLocationManagerLogType_didVisit" = "XXX";
+
 
 // MARK: Label - Main
 "main_list_item_bluetoothPeripheral" = "Beacon発信";
