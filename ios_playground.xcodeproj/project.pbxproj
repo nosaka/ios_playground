@@ -16,7 +16,6 @@
 		CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC21F009341009C1837 /* NotificationFactory.swift */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
-		CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA41B15A1EFB5210009F3E2B /* R.generated.swift */; };
 		CA46287D1EFB781500E84317 /* CentralExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */; };
 		CA46287E1EFB781500E84317 /* CentralExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */; };
 		CA4628801EFB849F00E84317 /* AppCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA46287F1EFB849F00E84317 /* AppCentralManager.swift */; };
@@ -44,7 +43,6 @@
 		CA15CCC21F009341009C1837 /* NotificationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
-		CA41B15A1EFB5210009F3E2B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CA46287B1EFB781500E84317 /* CentralExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralExampleViewController.swift; sourceTree = "<group>"; };
 		CA46287C1EFB781500E84317 /* CentralExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralExampleViewController.xib; sourceTree = "<group>"; };
 		CA46287F1EFB849F00E84317 /* AppCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCentralManager.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 		CADFE4E31EF7556100195E71 = {
 			isa = PBXGroup;
 			children = (
-				CA41B15A1EFB5210009F3E2B /* R.generated.swift */,
 				CADFE4EE1EF7556100195E71 /* ios_playground */,
 				CADFE4ED1EF7556100195E71 /* Products */,
 				58A0C5551017859E1C2FFAEC /* Pods */,
@@ -344,7 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */,
-				CA41B15B1EFB5210009F3E2B /* R.generated.swift in Sources */,
 				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */,

@@ -19,10 +19,15 @@
 
 // MARK: Common Label
 "unknown" = "不明";
-"didDetermineStateInside" = "リージョン検知 圏内";
-"didDetermineStateOutside" = "リージョン検知 圏外";
-"didEnterRegion" = "リージョン 入";
-"didExitRegion" = "リージョン 出";
+"centralManagerLogType_launchByLocation" = "位置情報による起動";
+"centralManagerLogType_terminate" = "プロセス終了";
+"centralManagerLogType_unknown" = "不明";
+"centralManagerLogType_startMonitoring" = "監視開始";
+"centralManagerLogType_stopMonitoring" = "監視停止";
+"centralManagerLogType_didDetermineStateInside" = "検知 圏内";
+"centralManagerLogType_didDetermineStateOutside" = "検知 圏外";
+"centralManagerLogType_didEnterRegion" = "リージョンに入りました";
+"centralManagerLogType_didExitRegion" = "リージョンから出ました";
 
 // MARK: Label - Main
 "main_list_item_bluetoothPeripheral" = "Beacon発信";

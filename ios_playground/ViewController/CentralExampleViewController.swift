@@ -21,7 +21,9 @@ class CentralExampleViewController: UIViewController {
     
     // MARK: variables
     
-    var tableData: Results<CentralManagerLog>?
+    fileprivate var tableData: Results<CentralManagerLog>?
+    
+    fileprivate var tokenCentralManagerLog: NotificationToken?
 
     // MARK: UIViewController
     
@@ -52,12 +54,23 @@ class CentralExampleViewController: UIViewController {
         super.viewDidAppear(animated)
         AppCentralManager.default.delegate = self
         
-        self.tableData = realmHelper.all(CentralManagerLog.self)
-        self.centralManagerLogTableView.reloadData()
+        self.tableData = realmHelper.all(CentralManagerLog.self, sorted: (CentralManagerLog.defaultSortKey, false))
+        self.tokenCentralManagerLog =
+            self.tableData?.addNotificationBlock { result in
+                switch result {
+                case .initial:
+                    self.centralManagerLogTableView.reloadData()
+                case .update:
+                    self.centralManagerLogTableView.reloadData()
+                case .error(let error):
+                    log.error(error.localizedDescription)
+                }
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         AppCentralManager.default.delegate = nil
+        self.tokenCentralManagerLog?.stop()
         super.viewDidDisappear(animated)
     }
     

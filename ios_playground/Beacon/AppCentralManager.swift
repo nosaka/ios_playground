@@ -45,14 +45,34 @@ class AppCentralManager: NSObject {
             return
         }
         UserDefaultsUtil.monitoring = true
+        if self.isMonitoring() {
+            // 既に監視開始中の場合は以降の処理を実施しない
+            return
+        }
         self.locationManager.startMonitoring(for: AppBeacon.beaconRegion)
+        realmHelper.log(CentralManagerLog: .startMonitoring)
     }
     
     /// モニタリング停止
     func stopMonitoring() {
         UserDefaultsUtil.monitoring = false
+        if !self.isMonitoring() {
+            // 既に監視停止済の場合は以降の処理を実施しない
+            return
+        }
         self.locationManager.stopMonitoring(for: AppBeacon.beaconRegion)
+        realmHelper.log(CentralManagerLog: .stopMonitoring)
     }
+    
+    func isMonitoring() -> Bool {
+        for region in self.locationManager.monitoredRegions {
+            if region.identifier == AppBeacon.identifier {
+                return true
+            }
+        }
+        return false
+    }
+    
 }
 /// AppCentralManagerDelegate
 protocol AppCentralManagerDelegate: class {

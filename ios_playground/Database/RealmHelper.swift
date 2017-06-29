@@ -22,9 +22,13 @@ class RealmHelper {
         }
     }
     
-    func all<T: Object>(_ type: T.Type) -> Results<T> {
+    func all<T: Object>(_ type: T.Type, sorted: (byKeyPath: String, ascending:Bool)? = nil) -> Results<T> {
         let realm = try! Realm()
+        if let sorted = sorted {
+            return realm.objects(type).sorted(byKeyPath: sorted.byKeyPath, ascending: sorted.ascending)
+        }
         return realm.objects(type)
+        
     }
     func delete<T: Object>(_ type: T.Type) {
         let realm = try! Realm()
