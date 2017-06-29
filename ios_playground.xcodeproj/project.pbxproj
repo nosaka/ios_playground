@@ -13,6 +13,7 @@
 		CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */; };
 		CA01F0071F03988700CA6C8C /* CentralManagerLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */; };
 		CA01F0091F039AB300CA6C8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F0081F039AB300CA6C8C /* Constants.swift */; };
+		CA01F00B1F049CB100CA6C8C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01F00A1F049CB100CA6C8C /* R.generated.swift */; };
 		CA15CCC31F009341009C1837 /* NotificationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15CCC21F009341009C1837 /* NotificationFactory.swift */; };
 		CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */; };
 		CA3F9D281EF79B0500172EC5 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */; };
@@ -40,6 +41,7 @@
 		CA01F0041F03988700CA6C8C /* CentralManagerLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralManagerLogCell.swift; sourceTree = "<group>"; };
 		CA01F0051F03988700CA6C8C /* CentralManagerLogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CentralManagerLogCell.xib; sourceTree = "<group>"; };
 		CA01F0081F039AB300CA6C8C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CA01F00A1F049CB100CA6C8C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CA15CCC21F009341009C1837 /* NotificationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationFactory.swift; sourceTree = "<group>"; };
 		CA3F9D241EF78ED600172EC5 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
 		CA3F9D271EF79B0500172EC5 /* AlertFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		CADFE4E31EF7556100195E71 = {
 			isa = PBXGroup;
 			children = (
+				CA01F00A1F049CB100CA6C8C /* R.generated.swift */,
 				CADFE4EE1EF7556100195E71 /* ios_playground */,
 				CADFE4ED1EF7556100195E71 /* Products */,
 				58A0C5551017859E1C2FFAEC /* Pods */,
@@ -342,6 +345,7 @@
 			files = (
 				CADFE5061EF7579300195E71 /* MainViewController.swift in Sources */,
 				CADFE51C1EF7881600195E71 /* AppPeripheralManager.swift in Sources */,
+				CA01F00B1F049CB100CA6C8C /* R.generated.swift in Sources */,
 				CA3F9D251EF78ED600172EC5 /* UserDefaultsUtil.swift in Sources */,
 				CA01F0061F03988700CA6C8C /* CentralManagerLogCell.swift in Sources */,
 				CADFE4F01EF7556100195E71 /* AppDelegate.swift in Sources */,
