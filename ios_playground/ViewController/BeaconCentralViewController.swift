@@ -32,7 +32,7 @@ class BeaconCentralViewController: UIViewController {
         super.viewDidLoad()
         
         // Viewの設定
-        self.title = R.string.localizable.centralExaple_title()
+        self.title = R.string.localizable.beaconCentral_title()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(self.tappedTrashBarButtonItem(_:)))
 
         if UserDefaultsUtil.monitoring {

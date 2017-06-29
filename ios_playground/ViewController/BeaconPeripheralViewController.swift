@@ -29,7 +29,7 @@ class BeaconPeripheralViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = R.string.localizable.peripheralExaple_title()
+        self.title = R.string.localizable.beaconPeripheral_title()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,7 +62,7 @@ class BeaconPeripheralViewController: UIViewController {
     
     /// アドバタイズ開始時レイアウト設定処理
     func setLayoutStartAdvertising() {
-        self.peripheralStateLabel.text = R.string.localizable.peripheralExaple_startAdvertising()
+        self.peripheralStateLabel.text = R.string.localizable.beaconPeripheral_startAdvertising()
         if !self.peripheralStateImageView.isAnimating {
             self.peripheralStateImageView.image = R.image.peripheral_On()
             UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: .repeat, animations: {
@@ -75,7 +75,7 @@ class BeaconPeripheralViewController: UIViewController {
     
     /// アドバタイズ停止時レイアウト設定処理
     func setLayoutStopAdvertising() {
-        self.peripheralStateLabel.text = R.string.localizable.peripheralExaple_stopAdvertising()
+        self.peripheralStateLabel.text = R.string.localizable.beaconPeripheral_stopAdvertising()
         
         self.peripheralStateImageView.layer.removeAllAnimations()
         self.peripheralStateImageView.image = R.image.peripheral_Off()
@@ -83,7 +83,7 @@ class BeaconPeripheralViewController: UIViewController {
     
     /// アドバタイズエラー時レイアウト設定処理
     func setLayoutErrorAdvertising() {
-        self.peripheralStateLabel.text = R.string.localizable.peripheralExaple_errorAdvertising()
+        self.peripheralStateLabel.text = R.string.localizable.beaconPeripheral_errorAdvertising()
         
         self.peripheralStateImageView.layer.removeAllAnimations()
         self.peripheralStateImageView.image = R.image.peripheral_Off()

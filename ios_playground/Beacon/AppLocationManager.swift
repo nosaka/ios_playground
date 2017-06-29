@@ -55,6 +55,7 @@ class AppLocationManager: NSObject {
     /// 位置情報更新停止
     func stopUpdateLocation() {
         UserDefaultsUtil.updateLocation = false
+        self.locationManager.stopUpdatingLocation()
         log.debug("stopUpdateLocation")
         realmHelper.log(appLocationManager: .stopUpdateLocation)
     }

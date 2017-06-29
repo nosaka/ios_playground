@@ -46,12 +46,17 @@
 // MARK: Label - Main
 "main_list_item_bluetoothPeripheral" = "Beacon発信";
 "main_list_item_bluetoothCentral" = "Beacon受信";
+"main_list_item_locationUpdate" = "位置情報更新";
 
-// MARK: Label - PeripheralExaple
-"peripheralExaple_title" = "Beacon発信";
-"peripheralExaple_startAdvertising" = "アドバタイズ開始中";
-"peripheralExaple_stopAdvertising" = "アドバタイズ停止中";
-"peripheralExaple_errorAdvertising" = "エラーが発生しました";
+// MARK: Label - BeaconPeripheral
+"beaconPeripheral_title" = "Beacon発信";
+"beaconPeripheral_startAdvertising" = "アドバタイズ開始中";
+"beaconPeripheral_stopAdvertising" = "アドバタイズ停止中";
+"beaconPeripheral_errorAdvertising" = "エラーが発生しました";
 
-// MARK: Label - CentralExaple
-"centralExaple_title" = "Beacon受信";
+// MARK: Label - BeaconCentral
+"beaconCentral_title" = "Beacon受信";
+
+// MARK: Label - AppLocation
+"appLocation_title" = "位置情報更新";
+

@@ -21,8 +21,11 @@ class MainViewController: UIViewController {
     enum TableViewItem {
         case bluetoothPeripheral
         case bluetoothCentral
+        case locationUpdate
         
-        static let items:[TableViewItem] = [.bluetoothPeripheral, .bluetoothCentral]
+        static let items:[TableViewItem] = [.bluetoothPeripheral,
+                                            .bluetoothCentral,
+                                            .locationUpdate]
         
         var text: String {
             get {
@@ -31,6 +34,8 @@ class MainViewController: UIViewController {
                     return R.string.localizable.main_list_item_bluetoothPeripheral()
                 case .bluetoothCentral:
                     return R.string.localizable.main_list_item_bluetoothCentral()
+                case .locationUpdate:
+                    return R.string.localizable.main_list_item_locationUpdate()
                 }
             }
         }
@@ -66,6 +71,8 @@ extension MainViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(BeaconCentralViewController(), animated: true)
         case .bluetoothPeripheral:
             self.navigationController?.pushViewController(BeaconPeripheralViewController(), animated: true)
+        case .locationUpdate:
+            self.navigationController?.pushViewController(AppLocationViewController(), animated: true)
         }
     }
 }
