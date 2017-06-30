@@ -14,9 +14,11 @@ class LogCell: UITableViewCell {
     
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var notesLabel: UILabel!
+    
     static let cellIdentifier: String = "logCell"
     
-    static let height: CGFloat = 58
+    static let height: CGFloat = 88
 
     override func awakeFromNib() {
         super.awakeFromNib()

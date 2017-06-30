@@ -27,6 +27,8 @@ class BeaconCentralManagerLog: Object {
             self.rawLogType = newValue.valueAsRealm
         }
     }
+    
+    dynamic var notes:String? = nil
 }
 /// BeaconCentralManagerLog:logType
 enum BeaconCentralManagerLogType: Int {
@@ -39,6 +41,7 @@ enum BeaconCentralManagerLogType: Int {
     case didDetermineStateOutside
     case didEnterRegion
     case didExitRegion
+    case didRangeBeacons
     
     var valueAsRealm: Int {
         get {
@@ -68,6 +71,8 @@ enum BeaconCentralManagerLogType: Int {
                 return R.string.localizable.beaconCentralManagerLogType_didEnterRegion()
             case .didExitRegion:
                 return R.string.localizable.beaconCentralManagerLogType_didExitRegion()
+            case .didRangeBeacons:
+                return R.string.localizable.beaconCentralManagerLogType_didRangeBeacons()
             }
         }
     }

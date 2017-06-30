@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         if let value = launchOptions?[UIApplicationLaunchOptionsKey.location] as? Bool, value {
-            realmHelper.log(beaconCentralManager: .launchByLocation)
             BeaconCentralManager.default.initLaunch()
             return true
         }

@@ -125,6 +125,7 @@ extension AppLocationViewController: UITableViewDataSource {
         }
         
         cell.messageLabel.text = item.logType.localizable
+        cell.notesLabel.text = item.notes
         return cell
     }
     

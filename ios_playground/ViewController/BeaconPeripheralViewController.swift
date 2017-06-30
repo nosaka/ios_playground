@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreBluetooth
-import CoreLocation
 import Rswift
 
 /// BeaconPeripheralViewController
@@ -46,7 +45,6 @@ class BeaconPeripheralViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
-
         BeaconPeripheralManager.default.delegate = nil
         BeaconPeripheralManager.default.stopAdvertising()
         super.viewDidDisappear(animated)

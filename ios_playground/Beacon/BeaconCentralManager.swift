@@ -28,6 +28,8 @@ class BeaconCentralManager: NSObject {
     
     /// ランチ時初期処理
     func initLaunch() {
+        realmHelper.log(beaconCentralManager: .launchByLocation,
+                        notes: "monitoredRegions:=" + self.locationManager.monitoredRegions.count.description)
         NotificationFactory.logging(.monitoredRegionWhenLaunch(self.locationManager)).notify()
     }
     
@@ -89,30 +91,45 @@ extension BeaconCentralManager: CLLocationManagerDelegate {
         }
         switch state {
         case .inside:
-            log.debug("didDetermineState inside")
-            realmHelper.log(beaconCentralManager: .didDetermineStateInside)
+            log.debug("didDetermineState inside " + region.identifier)
+            realmHelper.log(beaconCentralManager: .didDetermineStateInside, notes: region.identifier)
             self.locationManager.startRangingBeacons(in: region)
         case .outside:
-            log.debug("didDetermineState outside")
-            realmHelper.log(beaconCentralManager: .didDetermineStateOutside)
+            log.debug("didDetermineState outside " + region.identifier)
+            realmHelper.log(beaconCentralManager: .didDetermineStateOutside, notes: region.identifier)
             self.locationManager.stopRangingBeacons(in: region)
         default:
             break
         }
+        
+        // リージョン内Beacon数をリセット
+        UserDefaultsUtil.countOfBeaconInRegion = 0
     }
     
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        log.debug("didEnterRegion")
-        realmHelper.log(beaconCentralManager: .didEnterRegion)
+        log.debug("didEnterRegion " + region.identifier)
+        realmHelper.log(beaconCentralManager: .didEnterRegion, notes: region.identifier)
         NotificationFactory.enterRegion.notify()
     }
     
     @available(iOS 4.0, *)
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        log.debug("didExitRegion")
-        realmHelper.log(beaconCentralManager: .didExitRegion)
+        log.debug("didExitRegion " + region.identifier)
+        realmHelper.log(beaconCentralManager: .didExitRegion, notes: region.identifier)
         NotificationFactory.exitRegion.notify()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        log.debug("didRangeBeacons count:=" + beacons.count.description)
+        if region.identifier == AppBeacon.identifier {
+            if UserDefaultsUtil.countOfBeaconInRegion != beacons.count {
+                realmHelper.log(beaconCentralManager: .didRangeBeacons,
+                                notes: "beacons:=" + beacons.count.description)
+                UserDefaultsUtil.countOfBeaconInRegion = beacons.count
+            }
+            
+        }
     }
 
 }

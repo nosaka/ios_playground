@@ -11,6 +11,8 @@ import Foundation
 class UserDefaultsKey {
     static let startMonitoring = "keyStartMonitoring"
     static let updateLocation = "keyUpdateLocation"
+    
+    static let countOfBeaconInRegion = "keyCountOfBeaconInRegion"
 }
 /// UserDefaults Utility
 class UserDefaultsUtil {
@@ -25,7 +27,8 @@ class UserDefaultsUtil {
     /// 各種設定のデフォルト値を登録する
     func initialize() {
         UserDefaults.standard.register(defaults: [UserDefaultsKey.startMonitoring : false,
-                                                  UserDefaultsKey.updateLocation : false])
+                                                  UserDefaultsKey.updateLocation : false,
+                                                  UserDefaultsKey.countOfBeaconInRegion : 0])
     }
     
     /// リージョンモニタリングフラグ
@@ -50,5 +53,15 @@ class UserDefaultsUtil {
         }
     }
     
+    /// リージョン内Beacon数
+    class var countOfBeaconInRegion:Int {
+        get {
+            return UserDefaults.standard.integer(forKey: UserDefaultsKey.countOfBeaconInRegion)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.countOfBeaconInRegion)
+            UserDefaults.standard.synchronize()
+        }
+    }
     
 }

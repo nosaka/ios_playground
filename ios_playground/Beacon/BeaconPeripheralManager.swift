@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreBluetooth
-import CoreLocation
 
 /// BeaconPeripheralManager
 class BeaconPeripheralManager: NSObject {

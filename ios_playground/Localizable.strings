@@ -29,6 +29,7 @@
 "beaconCentralManagerLogType_didDetermineStateOutside" = "検知 圏外";
 "beaconCentralManagerLogType_didEnterRegion" = "リージョンに入りました";
 "beaconCentralManagerLogType_didExitRegion" = "リージョンから出ました";
+"beaconCentralManagerLogType_didRangeBeacons" = "レンジングのBeacon数が変わりました";
 
 "appLocationManagerLogType_unknown" = "不明";
 "appLocationManagerLogType_launchByLocation" = "位置情報による起動";

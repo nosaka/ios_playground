@@ -26,6 +26,8 @@ class AppLocationManagerLog: Object {
             self.rawLogType = newValue.valueAsRealm
         }
     }
+    
+    dynamic var notes:String? = nil
 }
 /// AppLocationManagerLog:logType
 enum AppLocationManagerLogType: Int {
